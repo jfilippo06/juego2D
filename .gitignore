@@ -1,0 +1,7 @@
+#Carpetas
+/env_juego2D
+/.vscode
+**/__pycache__/
+
+#Archivos
+db.sqlite3
