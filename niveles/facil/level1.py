@@ -1,7 +1,7 @@
 import pygame, sys
 from clases.button import Button
 from pantallas import perdiste
-from clases import life
+from clases import life, contador
 
 pygame.init()
 
@@ -10,6 +10,22 @@ BG = pygame.image.load("assets/Background.png")
 
 def get_font(size): # Returns Press-Start-2P in the desired size
     return pygame.font.Font("assets/font.ttf", size)
+
+QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
+                    text_input="PREGUNTA", font=get_font(12), base_color="black", hovering_color="black")
+ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=(175, 420), 
+                    text_input="#1", font=get_font(12), base_color="black", hovering_color="black")
+ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=(525, 420), 
+                    text_input="#2", font=get_font(12), base_color="black", hovering_color="black")
+ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=(175, 520), 
+                    text_input="#3", font=get_font(12), base_color="black", hovering_color="black")
+ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=(525, 520), 
+                    text_input="#4", font=get_font(12), base_color="black", hovering_color="black")
+
+COUNTER1 = contador.Counter()
+COUNTER2 = contador.Counter()
+COUNTER3 = contador.Counter()
+COUNTER4 = contador.Counter()
 
 def level1():
     while True:
@@ -24,19 +40,9 @@ def level1():
         
         M = str(life.LIFE)
         LIFE_TEXT = get_font(12).render(f"Vidas:{M}", True, "White")
-        LIFE_RECT = LIFE_TEXT.get_rect(center=(575, 60))
+        LIFE_RECT = LIFE_TEXT.get_rect(center=(570, 60))
         SCREEN.blit(LIFE_TEXT, LIFE_RECT)
 
-        QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
-                           text_input="PREGUNTA", font=get_font(12), base_color="black", hovering_color="black")
-        ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=(175, 420), 
-                           text_input="#1", font=get_font(12), base_color="black", hovering_color="black")
-        ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=(525, 420), 
-                            text_input="#2", font=get_font(12), base_color="black", hovering_color="black")
-        ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=(175, 520), 
-                            text_input="#3", font=get_font(12), base_color="black", hovering_color="black")
-        ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=(525, 520), 
-                            text_input="#4", font=get_font(12), base_color="black", hovering_color="black")
 
         for button in [QUESTION, ANSWER1, ANSWER2, ANSWER3, ANSWER4]:
             button.changeColor(PLAY_MOUSE_POS)
@@ -52,8 +58,12 @@ def level1():
                         life.LIFE = 5
                         perdiste.perdedor()
                     else:
-                        life.restar_vida()
+                        if COUNTER1.counter:
+                            COUNTER1.off_counter()
+                            # ANSWER1.image.fill('black')
+                            life.restar_vida()
                 if ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    # ANSWER2.changeImage(image=pygame.image.load("assets/frame1.png"))
                     pass
 
         pygame.display.update()
