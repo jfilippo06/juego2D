@@ -1,6 +1,6 @@
 import pygame, sys
 from clases.button import Button
-from niveles.facil import level1
+from pantallas import dificultad
 
 pygame.init()
 
@@ -22,9 +22,9 @@ def main_menu():
         MENU_RECT = MENU_TEXT.get_rect(center=(360, 110))
         
 
-        PLAY_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(360, 250), 
+        PLAY_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 250), 
                             text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(360, 370), 
+        QUIT_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 370), 
                             text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
         SCREEN.blit(MENU_TEXT, MENU_RECT)
@@ -39,7 +39,7 @@ def main_menu():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    level1.level1()
+                    dificultad.main_menu()
                 if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pygame.quit()
                     sys.exit()
