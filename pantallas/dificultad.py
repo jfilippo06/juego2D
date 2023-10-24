@@ -5,7 +5,6 @@ from niveles.facil import level1
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 600))
-pygame.display.set_caption("Dificultad")
 
 BG = pygame.image.load("assets/Background.png")
 
@@ -14,6 +13,7 @@ def get_font(size): # Returns Press-Start-2P in the desired size
 
 def main_menu():
     while True:
+        pygame.display.set_caption("Dificultad")
         SCREEN.blit(BG, (0, 0))
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
