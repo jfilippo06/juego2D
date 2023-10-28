@@ -5,7 +5,6 @@ from pantallas import perdiste
 from clases import life, contador
 
 pygame.init()
-pygame.time.set_timer(pygame.USEREVENT, 10000)
 
 SCREEN = pygame.display.set_mode((700, 600))
 BG = pygame.image.load("assets/Background.png")
@@ -30,23 +29,19 @@ COUNTER4 = contador.Counter()
 def level1():
     while True:
         pygame.display.set_caption("Nivel 1")
-
+        
+        SCREEN.blit(BG, (0,0))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
-        SCREEN.blit(BG, (0,0))
-        TIME = pygame.time.get_ticks() / 1000
-
+        
         text("NIVEL 1", "White", 12, 570, 30, SCREEN)
         text(f"Vidas:{HEARTS}", "White", 12,  570, 60, SCREEN)
-        text(f"Tiempo: {TIME}", "White", 12,  605, 90, SCREEN)
-
+        
         for button in [QUESTION, ANSWER1, ANSWER2, ANSWER3, ANSWER4]:
             button.changeColor(PLAY_MOUSE_POS)
-            button.update(SCREEN)        
+            button.update(SCREEN)
 
         for event in pygame.event.get():
-            if event.type == pygame.USEREVENT:
-                perdiste.perdedor()
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
