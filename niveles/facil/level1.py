@@ -1,13 +1,19 @@
 import pygame, sys
 from clases.button import Button
 from clases.functions import get_font, text
-from pantallas import perdiste
+from clases.music import Music, Sounds
+from pantallas import perdiste, ganaste
 from clases import life, contador
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 600))
 BG = pygame.image.load("assets/Background.png")
+VICTORY_SOUND = Sounds("sounds/victory.mp3")
+FAIL_SOUND = Sounds("sounds/fail.mp3")
+LOSE_MUSIC = Music("sounds/lose.mp3")
+YOU_WIN_MUSIC = Music("sounds/winner-award.mp3")
+
 
 QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
                     text_input="PREGUNTA", font=get_font(12), base_color="black", hovering_color="black")
@@ -48,15 +54,20 @@ def level1():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if ANSWER1.checkForInput(PLAY_MOUSE_POS):
                     if life.LIFE <= 1:
+                        LOSE_MUSIC.play()
                         life.LIFE = 5
                         perdiste.perdedor()
                     else:
                         if COUNTER1.counter:
-                            COUNTER1.off_counter()
-                            # ANSWER1.image.fill('black')
+                            FAIL_SOUND.play()
+                            # COUNTER1.off_counter()
                             life.restar_vida()
                 if ANSWER2.checkForInput(PLAY_MOUSE_POS):
-                    # ANSWER2.changeImage(image=pygame.image.load("assets/frame1.png"))
+                    VICTORY_SOUND.play()
                     pass
+                if ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    YOU_WIN_MUSIC.play()
+                    life.LIFE = 5
+                    ganaste.ganador()
 
         pygame.display.update()

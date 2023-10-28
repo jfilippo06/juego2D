@@ -1,29 +1,27 @@
 import pygame, sys
 from clases.button import Button
+from clases.functions import get_font, text
+from clases.music import Music
 from pantallas import menu
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 600))
-pygame.display.set_caption("Nivel 1")
-
 BG = pygame.image.load("assets/Background.png")
+MUSIC = Music("sounds/once-in-paris.mp3")
+MUSIC.set_volume(0.5)
 
-def get_font(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font("assets/font.ttf", size)
+PLAY_BACK = Button(image=None, pos=(370, 300), 
+                    text_input="VOLVER AL MENU PRINCIPAL", font=get_font(22), base_color="White", hovering_color="Green")
 
 def ganador():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        pygame.display.set_caption("Perdiste")
 
         SCREEN.fill("black")
-
-        PLAY_TEXT = get_font(40).render("HAZ GANADO", True, "White")
-        PLAY_RECT = PLAY_TEXT.get_rect(center=(370, 200))
-        SCREEN.blit(PLAY_TEXT, PLAY_RECT)
-
-        PLAY_BACK = Button(image=None, pos=(370, 300), 
-                            text_input="VOLVER AL MENU PRINCIPAL", font=get_font(22), base_color="White", hovering_color="Green")
+        
+        text("HAZ GANADO", "white", 40, 370, 200, SCREEN)
 
         PLAY_BACK.changeColor(PLAY_MOUSE_POS)
         PLAY_BACK.update(SCREEN)
@@ -34,6 +32,7 @@ def ganador():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
+                    MUSIC.play()
                     menu.main_menu()
 
         pygame.display.update()

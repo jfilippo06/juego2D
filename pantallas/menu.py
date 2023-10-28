@@ -1,12 +1,17 @@
 import pygame, sys
 from clases.button import Button
 from clases.functions import get_font, text
+from clases.music import Music
 from pantallas import dificultad
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 600))
 BG = pygame.image.load("assets/Background.png")
+MUSIC = Music("sounds/once-in-paris.mp3")
+MUSIC.set_volume(0.5)
+MUSIC.play()
+
 
 PLAY_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 250), 
                     text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
