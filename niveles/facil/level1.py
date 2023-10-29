@@ -12,7 +12,7 @@ BG = pygame.image.load("assets/Background.png")
 VICTORY_SOUND = Sounds("sounds/victory.mp3")
 FAIL_SOUND = Sounds("sounds/fail.mp3")
 LOSE_MUSIC = Music("sounds/lose.mp3")
-YOU_WIN_MUSIC = Music("sounds/winner-award.mp3")
+YOU_WIN_MUSIC = Music("sounds/winner.mp3")
 
 
 QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 

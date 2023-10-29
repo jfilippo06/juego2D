@@ -24,7 +24,7 @@ def main_menu():
         SCREEN.blit(BG, (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        text("DIFICLTAD", "#b68f40", 40, 360, 100, SCREEN)
+        text("DIFICULTAD", "#b68f40", 40, 360, 100, SCREEN)
 
         for button in [EASY_BUTTON, MEDIUN_BUTTON, HARD_BUTTON]:
             button.changeColor(MENU_MOUSE_POS)
