@@ -2,12 +2,13 @@ import pygame, sys
 from clases.button import Button
 from clases.functions import get_font, text
 from clases.music import Music
+from clases import countdown
 from niveles.facil import level1
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 600))
-BG = pygame.image.load("assets/Background.png")
+BG = pygame.image.load("assets/fondo.png")
 MUSIC = Music("sounds/thinking-time.mp3")
 
 EASY_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 240), 
@@ -38,6 +39,7 @@ def main_menu():
                 if EASY_BUTTON.checkForInput(MENU_MOUSE_POS):
                     MUSIC.play()
                     MUSIC.set_volume(1)
+                    countdown.start_timer(90)   
                     level1.level1()
                 if MEDIUN_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pass

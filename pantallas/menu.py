@@ -20,12 +20,12 @@ QUIT_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 370),
 
 def main_menu():
     while True:
-        pygame.display.set_caption("Menu")
+        pygame.display.set_caption("Animal Questions")
          
         SCREEN.blit(BG, (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        text("NOMBRE DEL JUEGO", "#b68f40", 40, 360, 110, SCREEN)
+        text("ANIMAL QUESTIONS", "#b68f40", 40, 360, 110, SCREEN)
 
         for button in [PLAY_BUTTON, QUIT_BUTTON]:
             button.changeColor(MENU_MOUSE_POS)

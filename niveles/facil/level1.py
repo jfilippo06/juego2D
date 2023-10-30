@@ -2,8 +2,8 @@ import pygame, sys
 from clases.button import Button
 from clases.functions import get_font, text
 from clases.music import Music, Sounds
+from clases import life, contador, countdown
 from pantallas import perdiste, ganaste
-from clases import life, contador
 
 pygame.init()
 
@@ -31,6 +31,7 @@ COUNTER2 = contador.Counter()
 COUNTER3 = contador.Counter()
 COUNTER4 = contador.Counter()
 
+clock = pygame.time.Clock()
 
 def level1():
     while True:
@@ -42,12 +43,16 @@ def level1():
         
         text("NIVEL 1", "White", 12, 570, 30, SCREEN)
         text(f"Vidas:{HEARTS}", "White", 12,  570, 60, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "White", 12,  595, 90, SCREEN)
         
         for button in [QUESTION, ANSWER1, ANSWER2, ANSWER3, ANSWER4]:
             button.changeColor(PLAY_MOUSE_POS)
             button.update(SCREEN)
 
         for event in pygame.event.get():
+            if event.type == countdown.timer_event:
+                countdown.reset_timer(90)
+                life.restar_vida()
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
@@ -64,10 +69,12 @@ def level1():
                             life.restar_vida()
                 if ANSWER2.checkForInput(PLAY_MOUSE_POS):
                     VICTORY_SOUND.play()
-                    pass
                 if ANSWER3.checkForInput(PLAY_MOUSE_POS):
                     YOU_WIN_MUSIC.play()
                     life.LIFE = 5
                     ganaste.ganador()
 
         pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
