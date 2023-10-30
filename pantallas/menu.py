@@ -9,7 +9,7 @@ pygame.init()
 SCREEN = pygame.display.set_mode((700, 600))
 BG = pygame.image.load("assets/fondo.png")
 MUSIC = Music("sounds/once-in-paris.mp3")
-MUSIC.set_volume(0.5)
+MUSIC.set_volume(0)
 MUSIC.play()
 
 

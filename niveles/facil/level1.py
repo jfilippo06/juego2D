@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, random
 from clases.button import Button
 from clases.functions import get_font, text
 from clases.music import Music, Sounds
@@ -14,16 +14,18 @@ FAIL_SOUND = Sounds("sounds/fail.mp3")
 LOSE_MUSIC = Music("sounds/lose.mp3")
 YOU_WIN_MUSIC = Music("sounds/winner.mp3")
 
+POSITIONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
+random.shuffle(POSITIONS)
 
 QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
                     text_input="PREGUNTA", font=get_font(12), base_color="black", hovering_color="black")
-ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=(175, 420), 
+ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[0], 
                     text_input="#1", font=get_font(12), base_color="black", hovering_color="black")
-ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=(525, 420), 
+ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[1], 
                     text_input="#2", font=get_font(12), base_color="black", hovering_color="black")
-ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=(175, 520), 
+ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[2], 
                     text_input="#3", font=get_font(12), base_color="black", hovering_color="black")
-ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=(525, 520), 
+ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[3], 
                     text_input="#4", font=get_font(12), base_color="black", hovering_color="black")
 
 COUNTER1 = contador.Counter()
@@ -50,12 +52,16 @@ def level1():
             button.update(SCREEN)
 
         for event in pygame.event.get():
-            if event.type == countdown.timer_event:
-                countdown.reset_timer(90)
-                life.restar_vida()
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+            if event.type == countdown.timer_event:
+                if life.LIFE <= 1:
+                    LOSE_MUSIC.play()
+                    life.LIFE = 5
+                    perdiste.perdedor()
+                countdown.reset_timer(90)
+                life.restar_vida()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if ANSWER1.checkForInput(PLAY_MOUSE_POS):
                     if life.LIFE <= 1:
@@ -73,6 +79,8 @@ def level1():
                     YOU_WIN_MUSIC.play()
                     life.LIFE = 5
                     ganaste.ganador()
+                if ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    pass
 
         pygame.display.update()
         pygame.display.flip()

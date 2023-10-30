@@ -38,7 +38,7 @@ def main_menu():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_BUTTON.checkForInput(MENU_MOUSE_POS):
                     MUSIC.play()
-                    MUSIC.set_volume(1)
+                    MUSIC.set_volume(0)
                     countdown.start_timer(90)   
                     level1.level1()
                 if MEDIUN_BUTTON.checkForInput(MENU_MOUSE_POS):
