@@ -1,9 +1,11 @@
 import random
 from clases.contador import Counter
-from niveles.facil import level1, level2, level3
+from niveles.facil.level1 import main_level1
+from niveles.facil.level2 import main_level2
+from niveles.facil.level3 import main_level3
 from pantallas import ganaste
 
-niveles = [(level1),(level2),(level3)]
+niveles = [(main_level1),(main_level2),(main_level3)]
 random.shuffle(niveles)
 niveles.append(ganaste)
 

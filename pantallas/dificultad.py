@@ -43,7 +43,7 @@ def main_menu():
                     MUSIC.play()
                     MUSIC.set_volume(0)
                     countdown.start_timer(90)   
-                    level1.main_level()
+                    level1.main_level1()
                 if MEDIUN_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pass
                 if HARD_BUTTON.checkForInput(MENU_MOUSE_POS):

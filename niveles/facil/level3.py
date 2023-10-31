@@ -53,7 +53,7 @@ def ganador():
     life.LIFE = 5
     ganaste.ganador()
 
-def main_level():
+def main_level3():
     while True:
         pygame.display.set_caption("Nivel 1")
         
