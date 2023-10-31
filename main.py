@@ -1,5 +1,5 @@
 from pantallas import menu
-from niveles.facil.level1 import level1
+from niveles.facil import level1, level2, level3
 
 menu.main_menu()
-# level1()
+# level1.main_level()

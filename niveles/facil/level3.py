@@ -19,15 +19,15 @@ POSITIONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
 random.shuffle(POSITIONS)
 
 QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
-                    text_input="¿Cuál es el animal más grande del mundo?", font=get_font(12), base_color="black", hovering_color="black")
+                    text_input="¿Qué animal juega con su presa antes de comérsela?", font=get_font(12), base_color="black", hovering_color="black")
 ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[0], 
-                    text_input="Ballena Azul", font=get_font(12), base_color="black", hovering_color="black")
+                    text_input="Orca", font=get_font(12), base_color="black", hovering_color="black")
 ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[1], 
-                    text_input="Ballena jorobada", font=get_font(12), base_color="black", hovering_color="black")
+                    text_input="Delfín", font=get_font(12), base_color="black", hovering_color="black")
 ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[2], 
-                    text_input="Oso", font=get_font(12), base_color="black", hovering_color="black")
+                    text_input="León", font=get_font(12), base_color="black", hovering_color="black")
 ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[3], 
-                    text_input="Elefante", font=get_font(12), base_color="black", hovering_color="black")
+                    text_input="Tigre", font=get_font(12), base_color="black", hovering_color="black")
 BACK_BUTTON = Button(None, pos=(565,120), 
                     text_input="VOLVER", font=get_font(12), base_color="black", hovering_color="white")
 
