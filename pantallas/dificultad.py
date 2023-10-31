@@ -1,8 +1,8 @@
 import pygame, sys
 from clases.button import Button
-from clases.functions import get_font, text
 from clases.music import Music
-from clases import countdown
+from functions.functions import get_font, text
+from functions import countdown
 from niveles.facil import level1
 from pantallas import menu
 

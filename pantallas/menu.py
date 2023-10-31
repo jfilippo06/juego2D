@@ -1,7 +1,7 @@
 import pygame, sys
 from clases.button import Button
-from clases.functions import get_font, text
 from clases.music import Music
+from functions.functions import get_font, text
 from pantallas import dificultad
 
 pygame.init()

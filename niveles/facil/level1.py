@@ -1,8 +1,9 @@
 import pygame, sys, random
 from clases.button import Button
-from clases.functions import get_font, text
 from clases.music import Music, Sounds
-from clases import life, contador, countdown
+from clases import contador
+from functions.functions import get_font, text
+from functions import countdown, life
 from pantallas import perdiste, ganaste, dificultad
 
 pygame.init()
@@ -90,6 +91,9 @@ def level1():
                     lifeButton(COUNTER3)
                 if BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
                     life.LIFE = 5
+                    COUNTER1.on_counter()
+                    COUNTER2.on_counter()
+                    COUNTER3.on_counter()
                     dificultad.main_menu()
 
         pygame.display.update()
