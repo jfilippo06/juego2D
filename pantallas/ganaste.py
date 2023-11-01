@@ -31,8 +31,8 @@ def ganador():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
-                    MUSIC.play()
-                    MUSIC.set_volume(0.5)
+                    # MUSIC.play()
+                    # MUSIC.set_volume(0.5)
                     menu.main_menu()
 
         pygame.display.update()
