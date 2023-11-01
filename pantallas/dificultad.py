@@ -28,21 +28,41 @@ COUNTER3 = Counter()
 
 clock = pygame.time.Clock()
 
-def lifeClock():
-    global generador_niveles
+def lifeClockEasy():
+    global generado_niveles_easy
     if life.LIFE <= 1:
         life.LIFE = 5
-        generador_niveles = obtener_elemento(niveles)
+        generado_niveles_easy = obtener_elemento(easy_levels)
         # LOSE_MUSIC.play()
         perdiste.perdedor()
     countdown.reset_timer(90)
     life.restar_vida()
 
-def lifeButton(COUNTER):
-    global generador_niveles
+def lifeClockMediun():
+    global generado_niveles_mediun
     if life.LIFE <= 1:
         life.LIFE = 5
-        generador_niveles = obtener_elemento(niveles)
+        generado_niveles_mediun = obtener_elemento(mediun_levels)
+        # LOSE_MUSIC.play()
+        perdiste.perdedor()
+    countdown.reset_timer(90)
+    life.restar_vida()
+    
+def lifeClockHard():
+    global generado_niveles_hard
+    if life.LIFE <= 1:
+        life.LIFE = 5
+        generado_niveles_hard = obtener_elemento(hard_levels)
+        # LOSE_MUSIC.play()
+        perdiste.perdedor()
+    countdown.reset_timer(90)
+    life.restar_vida()
+
+def lifeButtonEasy(COUNTER):
+    global generado_niveles_easy
+    if life.LIFE <= 1:
+        life.LIFE = 5
+        generado_niveles_easy = obtener_elemento(easy_levels)
         # LOSE_MUSIC.play()
         perdiste.perdedor()
     else:
@@ -51,22 +71,76 @@ def lifeButton(COUNTER):
             # FAIL_SOUND.play()
             life.restar_vida()
 
-def volver():
-    global generador_niveles
-    generador_niveles = obtener_elemento(niveles)
+def lifeButtonMediun(COUNTER):
+    global generado_niveles_mediun
+    if life.LIFE <= 1:
+        life.LIFE = 5
+        generado_niveles_mediun = obtener_elemento(mediun_levels)
+        # LOSE_MUSIC.play()
+        perdiste.perdedor()
+    else:
+        if COUNTER.counter:
+            COUNTER.off_counter()
+            # FAIL_SOUND.play()
+            life.restar_vida()
+
+def lifeButtonHard(COUNTER):
+    global generado_niveles_hard
+    if life.LIFE <= 1:
+        life.LIFE = 5
+        generado_niveles_hard = obtener_elemento(hard_levels)
+        # LOSE_MUSIC.play()
+        perdiste.perdedor()
+    else:
+        if COUNTER.counter:
+            COUNTER.off_counter()
+            # FAIL_SOUND.play()
+            life.restar_vida()
+
+def volverEasy():
+    global generado_niveles_easy
+    generado_niveles_easy = obtener_elemento(easy_levels)
     life.LIFE = 5
-    COUNTER1.on_counter()
-    COUNTER2.on_counter()
-    COUNTER3.on_counter()
+    reset_counter()
     # MUSIC.play()
     # MUSIC.set_volume(0.5)
     dificultad.main_menu()
 
-def ganador():
+def volverMediun():
+    global generado_niveles_mediun
+    generado_niveles_mediun = obtener_elemento(mediun_levels)
+    life.LIFE = 5
+    reset_counter()
+    # MUSIC.play()
+    # MUSIC.set_volume(0.5)
+    dificultad.main_menu()
+
+def volverHard():
+    global generado_niveles_easy
+    generado_niveles_easy = obtener_elemento(easy_levels)
+    life.LIFE = 5
+    reset_counter()
+    # MUSIC.play()
+    # MUSIC.set_volume(0.5)
+    dificultad.main_menu()
+
+def ganadorEasy():
     # VICTORY_SOUND.play()
     countdown.start_timer(90)
     reset_counter()
-    niveles_aleatorios()
+    niveles_aleatorios_easy()
+
+def ganadorMediun():
+    # VICTORY_SOUND.play()
+    countdown.start_timer(90)
+    reset_counter()
+    niveles_aleatorios_mediun()
+
+def ganadorHard():
+    # VICTORY_SOUND.play()
+    countdown.start_timer(90)
+    reset_counter()
+    niveles_aleatorios_hard()
 
 def reset_counter():
     COUNTER1.on_counter()
@@ -95,7 +169,7 @@ def main_menu():
                     MUSIC.play()
                     MUSIC.set_volume(0)
                     countdown.start_timer(90)
-                    niveles_aleatorios()
+                    niveles_aleatorios_easy()
                 if MEDIUN_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pass
                 if HARD_BUTTON.checkForInput(MENU_MOUSE_POS):
@@ -127,18 +201,18 @@ def easy_level1():
                 pygame.quit()
                 sys.exit()
             if event.type == countdown.timer_event:
-                lifeClock()
+                lifeClockEasy()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_LEVEL1_ANSWER1.checkForInput(PLAY_MOUSE_POS):
-                    ganador()
+                    ganadorEasy()
                 if EASY_LEVEL1_ANSWER2.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER1)
+                    lifeButtonEasy(COUNTER1)
                 if EASY_LEVEL1_ANSWER3.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER2)
+                    lifeButtonEasy(COUNTER2)
                 if EASY_LEVEL1_ANSWER4.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER3)
+                    lifeButtonEasy(COUNTER3)
                 if EASY_LEVEL1_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
-                    volver()
+                    volverEasy()
 
         pygame.display.update()
         pygame.display.flip()
@@ -166,18 +240,18 @@ def easy_level2():
                 pygame.quit()
                 sys.exit()
             if event.type == countdown.timer_event:
-                lifeClock()
+                lifeClockEasy()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_LEVEL2_ANSWER1.checkForInput(PLAY_MOUSE_POS):
-                    ganador()
+                    ganadorEasy()
                 if EASY_LEVEL2_ANSWER2.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER1)
+                    lifeButtonEasy(COUNTER1)
                 if EASY_LEVEL2_ANSWER3.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER2)
+                    lifeButtonEasy(COUNTER2)
                 if EASY_LEVEL2_ANSWER4.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER3)
+                    lifeButtonEasy(COUNTER3)
                 if EASY_LEVEL2_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
-                    volver()
+                    volverEasy()
 
         pygame.display.update()
         pygame.display.flip()
@@ -205,38 +279,64 @@ def easy_level3():
                 pygame.quit()
                 sys.exit()
             if event.type == countdown.timer_event:
-                lifeClock()
+                lifeClockEasy()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_LEVEL3_ANSWER1.checkForInput(PLAY_MOUSE_POS):
-                    ganador()
+                    ganadorEasy()
                 if EASY_LEVEL3_ANSWER2.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER1)
+                    lifeButtonEasy(COUNTER1)
                 if EASY_LEVEL3_ANSWER3.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER2)
+                    lifeButtonEasy(COUNTER2)
                 if EASY_LEVEL3_ANSWER4.checkForInput(PLAY_MOUSE_POS):
-                    lifeButton(COUNTER3)
+                    lifeButtonEasy(COUNTER3)
                 if EASY_LEVEL3_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
-                    volver()
+                    volverEasy()
 
         pygame.display.update()
         pygame.display.flip()
         countdown.check_timer_event()
         clock.tick(60)
 
-niveles = [easy_level1, easy_level2, easy_level3]
+easy_levels = [easy_level1, easy_level2, easy_level3]
+mediun_levels = []
+hard_levels = []
 
 def obtener_elemento(niveles):
     random.shuffle(niveles)
     for nivel in niveles:
         yield nivel
 
-generador_niveles = obtener_elemento(niveles)
+generado_niveles_easy = obtener_elemento(easy_levels)
+generado_niveles_mediun = obtener_elemento(mediun_levels)
+generado_niveles_hard = obtener_elemento(hard_levels)
 
-def niveles_aleatorios():
-    global generador_niveles
-    siguiente = next(generador_niveles, None)
+def niveles_aleatorios_easy():
+    global generado_niveles_easy
+    siguiente = next(generado_niveles_easy, None)
     if siguiente is None:
-        generador_niveles = obtener_elemento(niveles)
+        generado_niveles_easy = obtener_elemento(easy_levels)
+        # YOU_WIN_MUSIC.play()
+        life.LIFE = 5
+        ganaste.ganador()
+    else:
+        siguiente()
+
+def niveles_aleatorios_mediun():
+    global generado_niveles_mediun
+    siguiente = next(generado_niveles_mediun, None)
+    if siguiente is None:
+        generado_niveles_mediun = obtener_elemento(mediun_levels)
+        # YOU_WIN_MUSIC.play()
+        life.LIFE = 5
+        ganaste.ganador()
+    else:
+        siguiente()
+
+def niveles_aleatorios_hard():
+    global generado_niveles_hard
+    siguiente = next(generado_niveles_hard, None)
+    if siguiente is None:
+        generado_niveles_hard = obtener_elemento(hard_levels)
         # YOU_WIN_MUSIC.play()
         life.LIFE = 5
         ganaste.ganador()

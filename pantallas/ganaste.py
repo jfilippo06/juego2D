@@ -16,7 +16,7 @@ PLAY_BACK = Button(image=None, pos=(370, 300),
 def ganador():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        pygame.display.set_caption("Perdiste")
+        pygame.display.set_caption("Ganaste")
 
         SCREEN.fill("black")
         
