@@ -183,18 +183,17 @@ def easy_level1():
     while True:
         pygame.display.set_caption("Nivel 1")
 
-        BG = pygame.image.load("assets/dificultad/facil/nivel1.png")
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
+
+        for button in [EASY_LEVEL1_ANSWER1, EASY_LEVEL1_ANSWER2, EASY_LEVEL1_ANSWER3, EASY_LEVEL1_ANSWER4, EASY_LEVEL1_QUESTION, EASY_LEVEL1_BACK_BUTTON]:
+            button.changeColor(PLAY_MOUSE_POS)
+            button.update(SCREEN)
 
         text("NIVEL 1", "black", 12, 570, 30, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  570, 60, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12,  595, 90, SCREEN)
-
-        for button in [EASY_LEVEL1_QUESTION, EASY_LEVEL1_ANSWER1, EASY_LEVEL1_ANSWER2, EASY_LEVEL1_ANSWER3, EASY_LEVEL1_ANSWER4, EASY_LEVEL1_BACK_BUTTON]:
-            button.changeColor(PLAY_MOUSE_POS)
-            button.update(SCREEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -222,18 +221,17 @@ def easy_level1():
 def easy_level2():
     while True:
         pygame.display.set_caption("Nivel 2")
-        BG = pygame.image.load("assets/dificultad/facil/nivel1.png")
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
+
+        for button in [EASY_LEVEL2_ANSWER1, EASY_LEVEL2_ANSWER2, EASY_LEVEL2_ANSWER3, EASY_LEVEL2_ANSWER4, EASY_LEVEL2_QUESTION, EASY_LEVEL2_BACK_BUTTON]:
+            button.changeColor(PLAY_MOUSE_POS)
+            button.update(SCREEN)
 
         text("NIVEL 2", "black", 12, 570, 30, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  570, 60, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12,  595, 90, SCREEN)
-
-        for button in [EASY_LEVEL2_QUESTION, EASY_LEVEL2_ANSWER1, EASY_LEVEL2_ANSWER2, EASY_LEVEL2_ANSWER3, EASY_LEVEL2_ANSWER4, EASY_LEVEL2_BACK_BUTTON]:
-            button.changeColor(PLAY_MOUSE_POS)
-            button.update(SCREEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -261,18 +259,17 @@ def easy_level2():
 def easy_level3():
     while True:
         pygame.display.set_caption("Nivel 3")
-        BG = pygame.image.load("assets/dificultad/facil/nivel1.png")
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
+
+        for button in [EASY_LEVEL3_ANSWER1, EASY_LEVEL3_ANSWER2, EASY_LEVEL3_ANSWER3, EASY_LEVEL3_ANSWER4, EASY_LEVEL3_QUESTION, EASY_LEVEL3_BACK_BUTTON]:
+            button.changeColor(PLAY_MOUSE_POS)
+            button.update(SCREEN)
 
         text("NIVEL 3", "black", 12, 570, 30, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  570, 60, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12,  595, 90, SCREEN)
-
-        for button in [EASY_LEVEL3_QUESTION, EASY_LEVEL3_ANSWER1, EASY_LEVEL3_ANSWER2, EASY_LEVEL3_ANSWER3, EASY_LEVEL3_ANSWER4, EASY_LEVEL3_BACK_BUTTON]:
-            button.changeColor(PLAY_MOUSE_POS)
-            button.update(SCREEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

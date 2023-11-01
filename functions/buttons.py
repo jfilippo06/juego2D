@@ -2,8 +2,10 @@ import pygame, random
 from clases.button import Button
 from functions.functions import get_font
 
-POSITIONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
-random.shuffle(POSITIONS)
+# pos=(265, 80)
+# POSITIONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
+POSITIONS_ANIMALS = [(175,150), (525,150), (175, 450), (525,450)]
+random.shuffle(POSITIONS_ANIMALS)
 
 #MENU-----------------------------
 EASY_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 240), 
@@ -18,43 +20,43 @@ BACK_BUTTON = Button(None, pos=(610, 30),
 #FACIL-----------------------------
 
 #LEVEL1----------------------------
-EASY_LEVEL1_QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
+EASY_LEVEL1_QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(350, 300), 
                     text_input="¿Cuál es el animal más grande del mundo?", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL1_ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[0], 
-                    text_input="Ballena Azul", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL1_ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[1], 
-                    text_input="Ballena jorobada", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL1_ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[2], 
-                    text_input="Oso", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL1_ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[3], 
-                    text_input="Elefante", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL1_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel1/1.png"), pos=POSITIONS_ANIMALS[0], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL1_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel1/2.png"), pos=POSITIONS_ANIMALS[1], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL1_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel1/3.png"), pos=POSITIONS_ANIMALS[2], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL1_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel1/4.png"), pos=POSITIONS_ANIMALS[3], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 EASY_LEVEL1_BACK_BUTTON = Button(None, pos=(565,120), 
                     text_input="VOLVER", font=get_font(12), base_color="black", hovering_color="white")
 
 #LEVEL2-------------------------------
-EASY_LEVEL2_QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
+EASY_LEVEL2_QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(350, 300), 
                     text_input="¿Qué animal es carnívoro?", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL2_ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[0], 
-                    text_input="Tigre", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL2_ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[1], 
-                    text_input="Conejo", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL2_ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[2], 
-                    text_input="Cebra", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL2_ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[3], 
-                    text_input="Perezoso", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL2_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel2/1.png"), pos=POSITIONS_ANIMALS[0], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL2_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel2/2.png"), pos=POSITIONS_ANIMALS[1], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL2_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel2/3.png"), pos=POSITIONS_ANIMALS[2], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL2_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel2/4.png"), pos=POSITIONS_ANIMALS[3], 
+                    text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 EASY_LEVEL2_BACK_BUTTON = Button(None, pos=(565,120), 
                     text_input="VOLVER", font=get_font(12), base_color="black", hovering_color="white")
 
 #LEVEL3---------------------------------
-EASY_LEVEL3_QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(265, 80), 
+EASY_LEVEL3_QUESTION = Button(image=pygame.image.load("assets/frame1.png"), pos=(350, 300), 
                     text_input="¿Qué animal juega con su presa antes de comérsela?", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL3_ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[0], 
+EASY_LEVEL3_ANSWER1 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS_ANIMALS[0], 
                     text_input="Orca", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL3_ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[1], 
+EASY_LEVEL3_ANSWER2 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS_ANIMALS[1], 
                     text_input="Delfín", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL3_ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[2], 
+EASY_LEVEL3_ANSWER3 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS_ANIMALS[2], 
                     text_input="León", font=get_font(12), base_color="black", hovering_color="black")
-EASY_LEVEL3_ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS[3], 
+EASY_LEVEL3_ANSWER4 = Button(image=pygame.image.load("assets/frame.png"), pos=POSITIONS_ANIMALS[3], 
                     text_input="Tigre", font=get_font(12), base_color="black", hovering_color="black")
 EASY_LEVEL3_BACK_BUTTON = Button(None, pos=(565,120), 
                     text_input="VOLVER", font=get_font(12), base_color="black", hovering_color="white")
