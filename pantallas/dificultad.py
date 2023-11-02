@@ -203,11 +203,11 @@ def easy_level1():
                 lifeClockEasy()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_LEVEL1_ANSWER1.checkForInput(PLAY_MOUSE_POS):
-                    ganadorEasy()
-                if EASY_LEVEL1_ANSWER2.checkForInput(PLAY_MOUSE_POS):
                     lifeButtonEasy(COUNTER1)
-                if EASY_LEVEL1_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                if EASY_LEVEL1_ANSWER2.checkForInput(PLAY_MOUSE_POS):
                     lifeButtonEasy(COUNTER2)
+                if EASY_LEVEL1_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    ganadorEasy()
                 if EASY_LEVEL1_ANSWER4.checkForInput(PLAY_MOUSE_POS):
                     lifeButtonEasy(COUNTER3)
                 if EASY_LEVEL1_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
@@ -241,13 +241,13 @@ def easy_level2():
                 lifeClockEasy()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_LEVEL2_ANSWER1.checkForInput(PLAY_MOUSE_POS):
-                    ganadorEasy()
-                if EASY_LEVEL2_ANSWER2.checkForInput(PLAY_MOUSE_POS):
                     lifeButtonEasy(COUNTER1)
-                if EASY_LEVEL2_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                if EASY_LEVEL2_ANSWER2.checkForInput(PLAY_MOUSE_POS):
                     lifeButtonEasy(COUNTER2)
-                if EASY_LEVEL2_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                if EASY_LEVEL2_ANSWER3.checkForInput(PLAY_MOUSE_POS):
                     lifeButtonEasy(COUNTER3)
+                if EASY_LEVEL2_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    ganadorEasy()
                 if EASY_LEVEL2_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
                     volverEasy()
 

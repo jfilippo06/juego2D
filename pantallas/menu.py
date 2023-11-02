@@ -13,9 +13,9 @@ MUSIC.set_volume(0)
 MUSIC.play()
 
 
-PLAY_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 250), 
+PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 250), 
                     text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-QUIT_BUTTON = Button(image=pygame.image.load("assets/Rect.png"), pos=(360, 370), 
+QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 370), 
                     text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
 def main_menu():
