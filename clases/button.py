@@ -1,9 +1,8 @@
 import random
 
-
 class Button():
-    ORIGINAL_POSITIONS_ANIMALS = [(175,150), (525,150), (175, 450), (525,450)]
-    POSITIONS_ANIMALS = ORIGINAL_POSITIONS_ANIMALS.copy()
+    POSITIONS_ANIMALS = [(175,150), (525,150), (175, 450), (525,450)]
+    index = 0
 
     def __init__(self, image, pos, text_input, font, base_color, hovering_color):
         self.image = image
@@ -35,14 +34,15 @@ class Button():
         else:
             self.text = self.font.render(
                 self.text_input, True, self.base_color)
-
-    def set_random_position(self):
-        if not Button.POSITIONS_ANIMALS:
-            Button.POSITIONS_ANIMALS = Button.ORIGINAL_POSITIONS_ANIMALS.copy()
-        random.shuffle(Button.POSITIONS_ANIMALS)
-        new_pos = Button.POSITIONS_ANIMALS.pop(0)
-        self.x_pos = new_pos[0]
-        self.y_pos = new_pos[1]
+    
+    @classmethod
+    def set_random_position(cls, button):
+        if cls.index == 0:
+            random.shuffle(cls.POSITIONS_ANIMALS)
+        new_pos = cls.POSITIONS_ANIMALS[cls.index]
+        cls.index = (cls.index + 1) % len(cls.POSITIONS_ANIMALS)
         # Actualiza la posición del rectángulo y el texto
-        self.rect.center = (self.x_pos, self.y_pos)
-        self.text_rect.center = (self.x_pos, self.y_pos)
+        button.x_pos = new_pos[0]
+        button.y_pos = new_pos[1]
+        button.rect.center = (button.x_pos, button.y_pos)
+        button.text_rect.center = (button.x_pos, button.y_pos)
