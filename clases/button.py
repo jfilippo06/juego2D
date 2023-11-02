@@ -1,7 +1,7 @@
 import random
 
 class Button():
-    POSITIONS_ANIMALS = [(175,150), (525,150), (175, 450), (525,450)]
+    POSITIONS_ANIMALS = [(175,175), (525,175), (175, 475), (525,475)]
     index = 0
 
     def __init__(self, image, pos, text_input, font, base_color, hovering_color):

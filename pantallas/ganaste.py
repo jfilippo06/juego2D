@@ -6,7 +6,7 @@ from pantallas import menu
 
 pygame.init()
 
-SCREEN = pygame.display.set_mode((700, 600))
+SCREEN = pygame.display.set_mode((700, 650))
 MUSIC = Music("sounds/once-in-paris.mp3")
 
 PLAY_BACK = Button(image=None, pos=(370, 300), 
@@ -30,8 +30,8 @@ def ganador():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
-                    # MUSIC.play()
-                    # MUSIC.set_volume(0.5)
+                    MUSIC.play()
+                    MUSIC.set_volume(0.5)
                     menu.main_menu()
 
         pygame.display.update()

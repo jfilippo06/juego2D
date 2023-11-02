@@ -6,7 +6,7 @@ from pantallas import menu
 
 pygame.init()
 
-SCREEN = pygame.display.set_mode((700, 600))
+SCREEN = pygame.display.set_mode((700, 650))
 MUSIC = Music("sounds/once-in-paris.mp3")
 
 PLAY_BACK = Button(image=None, pos=(370, 300), 

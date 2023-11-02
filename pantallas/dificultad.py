@@ -14,10 +14,11 @@ from functions.buttons import EASY_LEVEL3_QUESTION, EASY_LEVEL3_ANSWER1, EASY_LE
 
 pygame.init()
 
-SCREEN = pygame.display.set_mode((700, 600))
+SCREEN = pygame.display.set_mode((700, 650))
 BG = pygame.image.load("assets/fondo.png")
 
 MUSIC = Music("sounds/thinking-time.mp3")
+MUSIC_MENU = Music("sounds/once-in-paris.mp3")
 LOSE_MUSIC = Music("sounds/lose.mp3")
 YOU_WIN_MUSIC = Music("sounds/winner.mp3")
 VICTORY_SOUND = Sounds("sounds/victory.mp3")
@@ -43,7 +44,7 @@ def lifeClockEasy():
     if life.LIFE <= 1:
         life.LIFE = 5
         generado_niveles_easy = obtener_elemento(easy_levels)
-        # LOSE_MUSIC.play()
+        LOSE_MUSIC.play()
         perdiste.perdedor()
     countdown.reset_timer(90)
     life.restar_vida()
@@ -76,12 +77,12 @@ def lifeButtonEasy(COUNTER):
     if life.LIFE <= 1:
         life.LIFE = 5
         generado_niveles_easy = obtener_elemento(easy_levels)
-        # LOSE_MUSIC.play()
+        LOSE_MUSIC.play()
         perdiste.perdedor()
     else:
         if COUNTER.counter:
             COUNTER.off_counter()
-            # FAIL_SOUND.play()
+            FAIL_SOUND.play()
             life.restar_vida()
 
 
@@ -118,8 +119,8 @@ def volverEasy():
     generado_niveles_easy = obtener_elemento(easy_levels)
     life.LIFE = 5
     reset_counter()
-    # MUSIC.play()
-    # MUSIC.set_volume(0.5)
+    MUSIC_MENU.play()
+    MUSIC_MENU.set_volume(0.5)
     dificultad.main_menu()
 
 
@@ -128,23 +129,25 @@ def volverMediun():
     generado_niveles_mediun = obtener_elemento(mediun_levels)
     life.LIFE = 5
     reset_counter()
-    # MUSIC.play()
-    # MUSIC.set_volume(0.5)
+    # MUSIC_MENU.play()
+    # MUSIC_MENU.set_volume(0.5)
     dificultad.main_menu()
 
 
 def volverHard():
-    global generado_niveles_easy
-    generado_niveles_easy = obtener_elemento(easy_levels)
+    global generado_niveles_hard
+    generado_niveles_hard = obtener_elemento(hard_levels)
     life.LIFE = 5
     reset_counter()
-    # MUSIC.play()
-    # MUSIC.set_volume(0.5)
+    # MUSIC_MENU.play()
+    # MUSIC_MENU.set_volume(0.5)
     dificultad.main_menu()
 
 
 def ganadorEasy():
-    # VICTORY_SOUND.play()
+    global get_name_levels
+    get_name_levels = name_levels()
+    VICTORY_SOUND.play()
     countdown.start_timer(90)
     reset_counter()
     niveles_aleatorios_easy()
@@ -172,8 +175,6 @@ def reset_counter():
 
 def main_menu():
     while True:
-        pygame.display.set_caption("Dificultad")
-
         SCREEN.blit(BG, (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
@@ -206,19 +207,20 @@ def main_menu():
 
 def easy_level1():
     while True:
-        pygame.display.set_caption("Nivel 1")
-
-        SCREEN.fill("white")
+        SCREEN.fill("white")        
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
 
         for button in [EASY_LEVEL1_ANSWER1, EASY_LEVEL1_ANSWER2, EASY_LEVEL1_ANSWER3, EASY_LEVEL1_ANSWER4, EASY_LEVEL1_QUESTION, EASY_LEVEL1_BACK_BUTTON]:
             button.changeColor(PLAY_MOUSE_POS)
             button.update(SCREEN)
-
-        text("NIVEL 1", "black", 12, 570, 30, SCREEN)
-        text(f"Vidas:{HEARTS}", "black", 12,  570, 60, SCREEN)
-        text("Tiempo:" + countdown.get_time(), "black", 12,  595, 90, SCREEN)
+        
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -246,18 +248,20 @@ def easy_level1():
 
 def easy_level2():
     while True:
-        pygame.display.set_caption("Nivel 2")
         SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
 
         for button in [EASY_LEVEL2_ANSWER1, EASY_LEVEL2_ANSWER2, EASY_LEVEL2_ANSWER3, EASY_LEVEL2_ANSWER4, EASY_LEVEL2_QUESTION, EASY_LEVEL2_BACK_BUTTON]:
             button.changeColor(PLAY_MOUSE_POS)
             button.update(SCREEN)
 
-        text("NIVEL 2", "black", 12, 570, 30, SCREEN)
-        text(f"Vidas:{HEARTS}", "black", 12,  570, 60, SCREEN)
-        text("Tiempo:" + countdown.get_time(), "black", 12,  595, 90, SCREEN)
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -285,18 +289,22 @@ def easy_level2():
 
 def easy_level3():
     while True:
-        pygame.display.set_caption("Nivel 3")
+        pygame.display.set_caption("ANIMAL QUESTIONS")
+
         SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
 
         for button in [EASY_LEVEL3_ANSWER1, EASY_LEVEL3_ANSWER2, EASY_LEVEL3_ANSWER3, EASY_LEVEL3_ANSWER4, EASY_LEVEL3_QUESTION, EASY_LEVEL3_BACK_BUTTON]:
             button.changeColor(PLAY_MOUSE_POS)
             button.update(SCREEN)
 
-        text("NIVEL 3", "black", 12, 570, 30, SCREEN)
-        text(f"Vidas:{HEARTS}", "black", 12,  570, 60, SCREEN)
-        text("Tiempo:" + countdown.get_time(), "black", 12,  595, 90, SCREEN)
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -320,7 +328,6 @@ def easy_level3():
         pygame.display.flip()
         countdown.check_timer_event()
         clock.tick(60)
-
 
 easy_levels = [easy_level1, easy_level2, easy_level3]
 mediun_levels = []
@@ -372,3 +379,16 @@ def niveles_aleatorios_hard():
         ganaste.ganador()
     else:
         siguiente()
+
+def niveles():
+    lista_niveles = ["Nivel1","Nivel2","Nivel3","Nivel4","Nivel5","Nivel6","Nivel7","Nivel8","Nivel9","Nivel10"]
+    while True:
+        for nivel in lista_niveles:
+            yield nivel
+
+gen = niveles()
+
+def name_levels():
+    return next(gen)
+
+get_name_levels = name_levels()
