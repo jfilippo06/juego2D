@@ -166,6 +166,10 @@ def main_menu():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if EASY_BUTTON.checkForInput(MENU_MOUSE_POS):
+                    EASY_LEVEL1_ANSWER1.set_random_position()
+                    EASY_LEVEL1_ANSWER2.set_random_position()
+                    EASY_LEVEL1_ANSWER3.set_random_position()
+                    EASY_LEVEL1_ANSWER4.set_random_position()
                     MUSIC.play()
                     MUSIC.set_volume(0)
                     countdown.start_timer(90)

@@ -33,6 +33,7 @@ EASY_LEVEL1_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/ni
 EASY_LEVEL1_BACK_BUTTON = Button(None, pos=(565,120), 
                     text_input="VOLVER", font=get_font(12), base_color="black", hovering_color="white")
 
+
 #LEVEL2-------------------------------
 EASY_LEVEL2_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel2/ask.png"), pos=(350, 300), 
                     text_input="¿Qué animal es carnívoro?", font=get_font(12), base_color="black", hovering_color="black")
