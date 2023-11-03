@@ -1,4 +1,5 @@
-import pygame, sys
+import pygame
+import sys
 from clases.button import Button
 from clases.music import Music
 from functions.functions import get_font, text
@@ -9,19 +10,20 @@ pygame.init()
 SCREEN = pygame.display.set_mode((700, 650))
 BG = pygame.image.load("assets/fondo.png")
 MUSIC = Music("sounds/once-in-paris.mp3")
-MUSIC.set_volume(0)
+MUSIC.set_volume(1)
 MUSIC.play()
 
 
-PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 250), 
-                    text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 370), 
-                    text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
+PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 250),
+                     text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
+QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 370),
+                     text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
+
 
 def main_menu():
     while True:
         pygame.display.set_caption("Animal Questions")
-         
+
         SCREEN.blit(BG, (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
@@ -30,7 +32,7 @@ def main_menu():
         for button in [PLAY_BUTTON, QUIT_BUTTON]:
             button.changeColor(MENU_MOUSE_POS)
             button.update(SCREEN)
-        
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()

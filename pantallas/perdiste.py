@@ -1,4 +1,5 @@
-import pygame, sys
+import pygame
+import sys
 from clases.button import Button
 from clases.music import Music
 from functions.functions import get_font, text
@@ -9,17 +10,16 @@ pygame.init()
 SCREEN = pygame.display.set_mode((700, 650))
 MUSIC = Music("sounds/once-in-paris.mp3")
 
-PLAY_BACK = Button(image=None, pos=(370, 300), 
-                    text_input="VOLVER AL MENU PRINCIPAL", font=get_font(22), base_color="White", hovering_color="Green")
+PLAY_BACK = Button(image=None, pos=(370, 330),
+                   text_input="VOLVER AL MENU PRINCIPAL", font=get_font(22), base_color="White", hovering_color="Green")
+
 
 def perdedor():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        pygame.display.set_caption("Perdiste")
-
         SCREEN.fill("black")
 
-        text("HAZ PERDIDO", "white", 40, 370, 200, SCREEN)
+        text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 
         PLAY_BACK.changeColor(PLAY_MOUSE_POS)
         PLAY_BACK.update(SCREEN)
