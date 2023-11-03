@@ -66,3 +66,45 @@ EASY_LEVEL3_BACK_BUTTON = Button(None, pos=BACK,
                                  text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
 
 # LEVEL4-------------------------------
+EASY_LEVEL4_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel4/ask.png"), pos=ASK,
+                              text_input="¿Cuál de las aves no pueden volar?", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL4_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel4/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL4_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel4/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL4_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel4/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL4_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel4/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL4_BACK_BUTTON = Button(None, pos=BACK,
+                                 text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
+
+# LEVEL5---------------------------------
+EASY_LEVEL5_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel5/ask.png"), pos=ASK,
+                              text_input="¿Cuál de estos animales carga con su casa?", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL5_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel5/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL5_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel5/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL5_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel5/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL5_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel5/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL5_BACK_BUTTON = Button(None, pos=BACK,
+                                 text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
+
+# LEVEL6---------------------------------
+EASY_LEVEL6_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel6/ask.png"), pos=ASK,
+                              text_input="¿Cuál de estos grupos de animales es el más extenso?", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL6_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel6/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL6_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel6/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL6_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel6/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL6_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel6/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL6_BACK_BUTTON = Button(None, pos=BACK,
+                                 text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
+
+# LEVEL6---------------------------------

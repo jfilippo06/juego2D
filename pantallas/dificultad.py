@@ -11,6 +11,9 @@ from functions.buttons import EASY_BUTTON, MEDIUN_BUTTON, HARD_BUTTON, BACK_BUTT
 from functions.buttons import EASY_LEVEL1_QUESTION, EASY_LEVEL1_ANSWER1, EASY_LEVEL1_ANSWER2, EASY_LEVEL1_ANSWER3, EASY_LEVEL1_ANSWER4, EASY_LEVEL1_BACK_BUTTON
 from functions.buttons import EASY_LEVEL2_QUESTION, EASY_LEVEL2_ANSWER1, EASY_LEVEL2_ANSWER2, EASY_LEVEL2_ANSWER3, EASY_LEVEL2_ANSWER4, EASY_LEVEL2_BACK_BUTTON
 from functions.buttons import EASY_LEVEL3_QUESTION, EASY_LEVEL3_ANSWER1, EASY_LEVEL3_ANSWER2, EASY_LEVEL3_ANSWER3, EASY_LEVEL3_ANSWER4, EASY_LEVEL3_BACK_BUTTON
+from functions.buttons import EASY_LEVEL4_QUESTION, EASY_LEVEL4_ANSWER1, EASY_LEVEL4_ANSWER2, EASY_LEVEL4_ANSWER3, EASY_LEVEL4_ANSWER4, EASY_LEVEL4_BACK_BUTTON
+from functions.buttons import EASY_LEVEL5_QUESTION, EASY_LEVEL5_ANSWER1, EASY_LEVEL5_ANSWER2, EASY_LEVEL5_ANSWER3, EASY_LEVEL5_ANSWER4, EASY_LEVEL5_BACK_BUTTON
+from functions.buttons import EASY_LEVEL6_QUESTION, EASY_LEVEL6_ANSWER1, EASY_LEVEL6_ANSWER2, EASY_LEVEL6_ANSWER3, EASY_LEVEL6_ANSWER4, EASY_LEVEL6_BACK_BUTTON
 
 pygame.init()
 
@@ -31,7 +34,10 @@ COUNTER3 = Counter()
 clock = pygame.time.Clock()
 buttons_easy = [EASY_LEVEL1_ANSWER1, EASY_LEVEL1_ANSWER2, EASY_LEVEL1_ANSWER3, EASY_LEVEL1_ANSWER4,
                 EASY_LEVEL2_ANSWER1, EASY_LEVEL2_ANSWER2, EASY_LEVEL2_ANSWER3, EASY_LEVEL2_ANSWER4,
-                EASY_LEVEL3_ANSWER1, EASY_LEVEL3_ANSWER2, EASY_LEVEL3_ANSWER3, EASY_LEVEL3_ANSWER4,]
+                EASY_LEVEL3_ANSWER1, EASY_LEVEL3_ANSWER2, EASY_LEVEL3_ANSWER3, EASY_LEVEL3_ANSWER4,
+                EASY_LEVEL4_ANSWER1, EASY_LEVEL4_ANSWER2, EASY_LEVEL4_ANSWER3, EASY_LEVEL4_ANSWER4,
+                EASY_LEVEL5_ANSWER1, EASY_LEVEL5_ANSWER2, EASY_LEVEL5_ANSWER3, EASY_LEVEL5_ANSWER4,
+                EASY_LEVEL6_ANSWER1, EASY_LEVEL6_ANSWER2, EASY_LEVEL6_ANSWER3, EASY_LEVEL6_ANSWER4,]
 
 
 def update_positions(buttons):
@@ -331,7 +337,130 @@ def easy_level3():
         clock.tick(60)
 
 
-easy_levels = [easy_level1, easy_level2, easy_level3]
+def easy_level4():
+    while True:
+        SCREEN.fill("white")
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        for button in [EASY_LEVEL4_ANSWER1, EASY_LEVEL4_ANSWER2, EASY_LEVEL4_ANSWER3, EASY_LEVEL4_ANSWER4, EASY_LEVEL4_QUESTION, EASY_LEVEL4_BACK_BUTTON]:
+            button.changeColor(PLAY_MOUSE_POS)
+            button.update(SCREEN)
+
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockEasy()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if EASY_LEVEL4_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER1)
+                if EASY_LEVEL4_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER2)
+                if EASY_LEVEL4_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    ganadorEasy()
+                if EASY_LEVEL4_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER3)
+                if EASY_LEVEL4_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverEasy()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
+
+def easy_level5():
+    while True:
+        SCREEN.fill("white")
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        for button in [EASY_LEVEL5_ANSWER1, EASY_LEVEL5_ANSWER2, EASY_LEVEL5_ANSWER3, EASY_LEVEL5_ANSWER4, EASY_LEVEL5_QUESTION, EASY_LEVEL5_BACK_BUTTON]:
+            button.changeColor(PLAY_MOUSE_POS)
+            button.update(SCREEN)
+
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockEasy()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if EASY_LEVEL5_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER1)
+                if EASY_LEVEL5_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    ganadorEasy()
+                if EASY_LEVEL5_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER2)
+                if EASY_LEVEL5_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER3)
+                if EASY_LEVEL5_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverEasy()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
+
+def easy_level6():
+    while True:
+        SCREEN.fill("white")
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        for button in [EASY_LEVEL6_ANSWER1, EASY_LEVEL6_ANSWER2, EASY_LEVEL6_ANSWER3, EASY_LEVEL6_ANSWER4, EASY_LEVEL6_QUESTION, EASY_LEVEL6_BACK_BUTTON]:
+            button.changeColor(PLAY_MOUSE_POS)
+            button.update(SCREEN)
+
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockEasy()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if EASY_LEVEL6_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER1)
+                if EASY_LEVEL6_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    ganadorEasy()
+                if EASY_LEVEL6_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER2)
+                if EASY_LEVEL6_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonEasy(COUNTER3)
+                if EASY_LEVEL6_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverEasy()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
+
+easy_levels = [easy_level1, easy_level2, easy_level3, easy_level4, easy_level5, easy_level6]
 mediun_levels = []
 hard_levels = []
 
