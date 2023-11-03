@@ -107,4 +107,46 @@ EASY_LEVEL6_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/ni
 EASY_LEVEL6_BACK_BUTTON = Button(None, pos=BACK,
                                  text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
 
-# LEVEL6---------------------------------
+# LEVEL7---------------------------------
+EASY_LEVEL7_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel7/ask.png"), pos=ASK,
+                              text_input="¿Cuál es el animal con la mordida más fuerte?", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL7_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel7/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL7_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel7/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL7_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel7/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL7_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel7/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL7_BACK_BUTTON = Button(None, pos=BACK,
+                                 text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
+
+# LEVEL8---------------------------------
+EASY_LEVEL8_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel8/ask.png"), pos=ASK,
+                              text_input="¿Cuál es el mejor amigo del hombre?", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL8_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel8/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL8_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel8/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL8_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel8/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL8_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel8/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL8_BACK_BUTTON = Button(None, pos=BACK,
+                                 text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
+
+# LEVEL9---------------------------------
+EASY_LEVEL9_QUESTION = Button(image=pygame.image.load("assets/dificultad/facil/nivel9/ask.png"), pos=ASK,
+                              text_input="¿Cuál de estos animales tiene la mejor memoria?", font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL9_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/facil/nivel9/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL9_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/facil/nivel9/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL9_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/nivel9/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL9_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel9/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+EASY_LEVEL9_BACK_BUTTON = Button(None, pos=BACK,
+                                 text_input="SALIR", font=get_font(12), base_color="black", hovering_color="white")
+
+# LEVEL10---------------------------------
