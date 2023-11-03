@@ -47,6 +47,7 @@ def lifeClockEasy():
         LOSE_MUSIC.play()
         perdiste.perdedor()
     countdown.reset_timer(90)
+    FAIL_SOUND.play()
     life.restar_vida()
 
 
@@ -58,6 +59,7 @@ def lifeClockMediun():
         # LOSE_MUSIC.play()
         perdiste.perdedor()
     countdown.reset_timer(90)
+    FAIL_SOUND.play()
     life.restar_vida()
 
 
@@ -69,6 +71,7 @@ def lifeClockHard():
         # LOSE_MUSIC.play()
         perdiste.perdedor()
     countdown.reset_timer(90)
+    FAIL_SOUND.play()
     life.restar_vida()
 
 
@@ -192,7 +195,7 @@ def main_menu():
                 if EASY_BUTTON.checkForInput(MENU_MOUSE_POS):
                     update_positions(buttons_easy)
                     MUSIC.play()
-                    MUSIC.set_volume(0)
+                    MUSIC.set_volume(1)
                     countdown.start_timer(90)
                     niveles_aleatorios_easy()
                 if MEDIUN_BUTTON.checkForInput(MENU_MOUSE_POS):
@@ -207,7 +210,7 @@ def main_menu():
 
 def easy_level1():
     while True:
-        SCREEN.fill("white")        
+        SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -217,7 +220,7 @@ def easy_level1():
         for button in [EASY_LEVEL1_ANSWER1, EASY_LEVEL1_ANSWER2, EASY_LEVEL1_ANSWER3, EASY_LEVEL1_ANSWER4, EASY_LEVEL1_QUESTION, EASY_LEVEL1_BACK_BUTTON]:
             button.changeColor(PLAY_MOUSE_POS)
             button.update(SCREEN)
-        
+
         text(get_name_levels, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
@@ -289,8 +292,6 @@ def easy_level2():
 
 def easy_level3():
     while True:
-        pygame.display.set_caption("ANIMAL QUESTIONS")
-
         SCREEN.fill("white")
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -329,6 +330,7 @@ def easy_level3():
         countdown.check_timer_event()
         clock.tick(60)
 
+
 easy_levels = [easy_level1, easy_level2, easy_level3]
 mediun_levels = []
 hard_levels = []
@@ -350,7 +352,7 @@ def niveles_aleatorios_easy():
     siguiente = next(generado_niveles_easy, None)
     if siguiente is None:
         generado_niveles_easy = obtener_elemento(easy_levels)
-        # YOU_WIN_MUSIC.play()
+        YOU_WIN_MUSIC.play()
         life.LIFE = 5
         ganaste.ganador()
     else:
@@ -380,15 +382,20 @@ def niveles_aleatorios_hard():
     else:
         siguiente()
 
+
 def niveles():
-    lista_niveles = ["Nivel1","Nivel2","Nivel3","Nivel4","Nivel5","Nivel6","Nivel7","Nivel8","Nivel9","Nivel10"]
+    lista_niveles = ["Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4",
+                     "Nivel 5", "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10"]
     while True:
         for nivel in lista_niveles:
             yield nivel
 
+
 gen = niveles()
+
 
 def name_levels():
     return next(gen)
+
 
 get_name_levels = name_levels()
