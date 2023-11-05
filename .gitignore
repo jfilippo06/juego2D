@@ -2,8 +2,6 @@
 /env_juego2D
 /.vscode
 **/__pycache__/
-/sounds
-/asstes
 
 #Archivos
 db.sqlite3
