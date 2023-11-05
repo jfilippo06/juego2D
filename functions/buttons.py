@@ -145,3 +145,31 @@ EASY_LEVEL10_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/facil/n
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 EASY_LEVEL10_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/facil/nivel10/4.png"), pos=POSITIONS_ANIMALS[3],
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# MEDIO-----------------------------------
+
+# LEVEL1---------------------------------
+MEDIUN_LEVEL1_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel1/ask.png"), pos=ASK,
+                              text_input="¿En qué habitad vive el topo de nariz estrellada?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL1_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel1/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL1_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel1/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL1_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel1/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL1_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel1/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL2---------------------------------
+MEDIUN_LEVEL2_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel2/ask.png"), pos=ASK,
+                              text_input="¿Cuál animal tiene el olfato más desarrollado?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL2_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel2/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL2_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel2/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL2_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel2/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL2_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel2/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+
