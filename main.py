@@ -1,5 +1,5 @@
 from pantallas import menu
-from pantallas.dificultad import easy_level10
+from pantallas.dificultad import mediun_level4
 
 menu.main_menu()
-# easy_level10()
+# mediun_level4()

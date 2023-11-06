@@ -3,12 +3,11 @@ import random
 from clases.button import Button
 from functions.functions import get_font
 
-# pos=(265, 80)
-# POSITIONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
-POSITIONS_ANIMALS = [(175, 175), (525, 175), (175, 475), (525, 475)]
-BACK = (50, 640)
 ASK = (350, 325)
-random.shuffle(POSITIONS_ANIMALS)
+ASK2 = (320, 80)
+BACK = (50, 640)
+POSITIONS_ANIMALS = [(175, 175), (525, 175), (175, 475), (525, 475)]
+POSITIONS_BUTTONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
 
 # MENU------------------------------
 EASY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 240),
@@ -171,5 +170,29 @@ MEDIUN_LEVEL2_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL2_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel2/4.png"), pos=POSITIONS_ANIMALS[3],
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL3---------------------------------
+MEDIUN_LEVEL3_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel3/ask.png"), pos=ASK,
+                              text_input="¿El sonido más fuerte por un ser vivo lo causa?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL3_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel3/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL3_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel3/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL3_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel3/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL3_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel3/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL4---------------------------------
+MEDIUN_LEVEL4_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel4/ask.png"), pos=ASK2,
+                              text_input="¿Cuantas horas pueden llegar a dormir un koala?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL4_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel4/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="2 Horas", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL4_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel4/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="4 Horas", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL4_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel4/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="22 Horas", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL4_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel4/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="15 Horas", font=get_font(12), base_color="black", hovering_color="black")
 
 
