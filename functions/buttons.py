@@ -1,5 +1,4 @@
 import pygame
-import random
 from clases.button import Button
 from functions.functions import get_font
 
@@ -195,4 +194,14 @@ MEDIUN_LEVEL4_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/
 MEDIUN_LEVEL4_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel4/button_ask.png"), pos=POSITIONS_BUTTONS[3],
                              text_input="15 Horas", font=get_font(12), base_color="black", hovering_color="black")
 
-
+# LEVEL5---------------------------------
+MEDIUN_LEVEL5_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel5/ask.png"), pos=ASK,
+                              text_input="¿Dónde viven los osos polares?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL5_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL5_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL5_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL5_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
