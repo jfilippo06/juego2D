@@ -229,3 +229,15 @@ MEDIUN_LEVEL7_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/
                              text_input="Ambos", font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL7_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel7/button_ask.png"), pos=POSITIONS_BUTTONS[3],
                              text_input="Ninguno", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL8---------------------------------
+MEDIUN_LEVEL8_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel8/ask.png"), pos=ASK,
+                              text_input="¿Cuál es el felino más peligroso?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL8_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel8/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL8_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel8/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL8_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel8/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL8_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel8/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
