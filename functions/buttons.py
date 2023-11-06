@@ -205,3 +205,27 @@ MEDIUN_LEVEL5_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL5_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/4.png"), pos=POSITIONS_ANIMALS[3],
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL6---------------------------------
+MEDIUN_LEVEL6_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel6/ask.png"), pos=ASK2,
+                              text_input="¿Cómo se comunican los elefantes?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL6_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel6/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="Señas", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL6_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel6/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="Infrasonidos", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL6_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel6/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="Mirada", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL6_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel6/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="Voz", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL7---------------------------------
+MEDIUN_LEVEL7_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel7/ask.png"), pos=(340, 80),
+                              text_input="¿Cuál género de caballito de mar puede tener crías?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL7_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel7/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="Hembra", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL7_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel7/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="Macho", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL7_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel7/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="Ambos", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL7_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel7/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="Ninguno", font=get_font(12), base_color="black", hovering_color="black")

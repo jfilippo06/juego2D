@@ -23,6 +23,8 @@ from functions.buttons import MEDIUN_LEVEL2_QUESTION, MEDIUN_LEVEL2_ANSWER1, MED
 from functions.buttons import MEDIUN_LEVEL3_QUESTION, MEDIUN_LEVEL3_ANSWER1, MEDIUN_LEVEL3_ANSWER2, MEDIUN_LEVEL3_ANSWER3, MEDIUN_LEVEL3_ANSWER4
 from functions.buttons import MEDIUN_LEVEL4_QUESTION, MEDIUN_LEVEL4_ANSWER1, MEDIUN_LEVEL4_ANSWER2, MEDIUN_LEVEL4_ANSWER3, MEDIUN_LEVEL4_ANSWER4
 from functions.buttons import MEDIUN_LEVEL5_QUESTION, MEDIUN_LEVEL5_ANSWER1, MEDIUN_LEVEL5_ANSWER2, MEDIUN_LEVEL5_ANSWER3, MEDIUN_LEVEL5_ANSWER4
+from functions.buttons import MEDIUN_LEVEL6_QUESTION, MEDIUN_LEVEL6_ANSWER1, MEDIUN_LEVEL6_ANSWER2, MEDIUN_LEVEL6_ANSWER3, MEDIUN_LEVEL6_ANSWER4
+from functions.buttons import MEDIUN_LEVEL7_QUESTION, MEDIUN_LEVEL7_ANSWER1, MEDIUN_LEVEL7_ANSWER2, MEDIUN_LEVEL7_ANSWER3, MEDIUN_LEVEL7_ANSWER4
 
 pygame.init()
 
@@ -57,7 +59,9 @@ buttons_mediun = [MEDIUN_LEVEL1_ANSWER1, MEDIUN_LEVEL1_ANSWER2, MEDIUN_LEVEL1_AN
                   MEDIUN_LEVEL3_ANSWER1, MEDIUN_LEVEL3_ANSWER2, MEDIUN_LEVEL3_ANSWER3, MEDIUN_LEVEL3_ANSWER4,
                   MEDIUN_LEVEL5_ANSWER1, MEDIUN_LEVEL5_ANSWER2, MEDIUN_LEVEL5_ANSWER3, MEDIUN_LEVEL5_ANSWER4,]
 
-buttons_mediun_answers = [MEDIUN_LEVEL4_ANSWER1, MEDIUN_LEVEL4_ANSWER2, MEDIUN_LEVEL4_ANSWER3, MEDIUN_LEVEL4_ANSWER4]
+buttons_mediun_answers = [MEDIUN_LEVEL4_ANSWER1, MEDIUN_LEVEL4_ANSWER2, MEDIUN_LEVEL4_ANSWER3, MEDIUN_LEVEL4_ANSWER4,
+                          MEDIUN_LEVEL6_ANSWER1, MEDIUN_LEVEL6_ANSWER2, MEDIUN_LEVEL6_ANSWER3, MEDIUN_LEVEL6_ANSWER4,
+                          MEDIUN_LEVEL7_ANSWER1, MEDIUN_LEVEL7_ANSWER2, MEDIUN_LEVEL7_ANSWER3, MEDIUN_LEVEL7_ANSWER4,]
 
 
 def update_positions(buttons):
@@ -917,13 +921,105 @@ def mediun_level5():
         countdown.check_timer_event()
         clock.tick(60)
 
+
+def mediun_level6():
+    while True:
+        BG = pygame.image.load("assets/dificultad/media/nivel6/fondo.png")
+        SCREEN.blit(BG, (0, 25))
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        for button in [MEDIUN_LEVEL6_ANSWER1, MEDIUN_LEVEL6_ANSWER2, MEDIUN_LEVEL6_ANSWER3, MEDIUN_LEVEL6_ANSWER4, MEDIUN_LEVEL6_QUESTION]:
+            button.update(SCREEN)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
+        LEVEL_BACK_BUTTON.update(SCREEN)
+
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockMediun()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if MEDIUN_LEVEL6_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonMediun(COUNTER1)
+                if MEDIUN_LEVEL6_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    ganadorMediun()
+                if MEDIUN_LEVEL6_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonMediun(COUNTER2)
+                if MEDIUN_LEVEL6_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonMediun(COUNTER3)
+                if LEVEL_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverMediun()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
+
+def mediun_level7():
+    while True:
+        BG = pygame.image.load("assets/dificultad/media/nivel7/fondo.png")
+        SCREEN.blit(BG, (0, 25))
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        for button in [MEDIUN_LEVEL7_ANSWER1, MEDIUN_LEVEL7_ANSWER2, MEDIUN_LEVEL7_ANSWER3, MEDIUN_LEVEL7_ANSWER4, MEDIUN_LEVEL7_QUESTION]:
+            button.update(SCREEN)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
+        LEVEL_BACK_BUTTON.update(SCREEN)
+
+        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockMediun()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if MEDIUN_LEVEL7_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonMediun(COUNTER1)
+                if MEDIUN_LEVEL7_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    ganadorMediun()
+                if MEDIUN_LEVEL7_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonMediun(COUNTER2)
+                if MEDIUN_LEVEL7_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonMediun(COUNTER3)
+                if LEVEL_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverMediun()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
 # HARD LEVES---------------------------------------------
+
 
 easy_levels = [
     easy_level1, easy_level2, easy_level3, easy_level4, easy_level5,
     easy_level6, easy_level7, easy_level8, easy_level9, easy_level10
 ]
-mediun_levels = [mediun_level1, mediun_level2, mediun_level3, mediun_level4, mediun_level5]
+mediun_levels = [
+    mediun_level1, mediun_level2, mediun_level3, mediun_level4, mediun_level5, 
+    mediun_level6, mediun_level7
+]
 hard_levels = []
 
 
