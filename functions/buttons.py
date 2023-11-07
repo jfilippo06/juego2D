@@ -1,4 +1,5 @@
 import pygame
+import random
 from clases.button import Button
 from functions.functions import get_font
 
@@ -7,6 +8,8 @@ ASK2 = (320, 80)
 BACK = (50, 640)
 POSITIONS_ANIMALS = [(175, 175), (525, 175), (175, 475), (525, 475)]
 POSITIONS_BUTTONS = [(175, 420), (525, 420), (175, 520), (525, 520)]
+random.shuffle(POSITIONS_ANIMALS)
+random.shuffle(POSITIONS_BUTTONS)
 
 # MENU------------------------------
 EASY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 240),
@@ -198,7 +201,7 @@ MEDIUN_LEVEL4_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/
 MEDIUN_LEVEL5_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel5/ask.png"), pos=ASK2,
                               text_input="¿Dónde viven los osos polares?", font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL5_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/button_ask.png"), pos=POSITIONS_BUTTONS[0],
-                             text_input="Artico", font=get_font(12), base_color="black", hovering_color="black")
+                             text_input="Ártico", font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL5_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/button_ask.png"), pos=POSITIONS_BUTTONS[1],
                              text_input="Polo sur", font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL5_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel5/button_ask.png"), pos=POSITIONS_BUTTONS[2],
@@ -241,3 +244,32 @@ MEDIUN_LEVEL8_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 MEDIUN_LEVEL8_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel8/4.png"), pos=POSITIONS_ANIMALS[3],
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL9---------------------------------
+MEDIUN_LEVEL9_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel9/ask.png"), pos=ASK,
+                              text_input="¿Cuál es el animal con los ojos más grandes del planeta?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL9_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel9/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL9_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel9/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL9_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel9/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL9_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel9/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL10---------------------------------
+MEDIUN_LEVEL10_QUESTION = Button(image=pygame.image.load("assets/dificultad/media/nivel10/ask.png"), pos=(340, 80),
+                              text_input="¿Cuánto dura la gestación de los elefantes?", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL10_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/media/nivel10/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="22 Meses", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL10_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/media/nivel10/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="1 Semana", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL10_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/media/nivel10/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="1 Mes", font=get_font(12), base_color="black", hovering_color="black")
+MEDIUN_LEVEL10_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media/nivel10/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="1 Año", font=get_font(12), base_color="black", hovering_color="black")
+
+# HARD_LEVELS----------------------------
+
+# LEVEL1---------------------------------
+
