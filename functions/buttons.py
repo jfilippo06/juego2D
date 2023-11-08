@@ -272,7 +272,6 @@ MEDIUN_LEVEL10_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media
 # HARD_LEVELS----------------------------
 
 # LEVEL1---------------------------------
-
 HARD_LEVEL1_QUESTION = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/ask.png"), pos=(350, 80),
                               text_input="¿Tasa de mortalidad tiene el mordisco de la mamba negra?", font=get_font(12), base_color="black", hovering_color="black")
 HARD_LEVEL1_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/button_ask.png"), pos=POSITIONS_BUTTONS[0],
@@ -285,4 +284,13 @@ HARD_LEVEL1_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/dificil/
                              text_input="95%", font=get_font(12), base_color="black", hovering_color="black")
 
 # LEVEL2---------------------------------
-
+HARD_LEVEL2_QUESTION = Button(image=pygame.image.load("assets/dificultad/dificil/nivel2/ask.png"), pos=(350, 80),
+                              text_input="¿Cuál lagarto puede disparar sangre por los ojos?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL2_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel2/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="Lagarto cornudo", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL2_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel2/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="Lagarto escamaso", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL2_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel2/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="Lagarto escupido", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL2_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel2/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="Lagarto", font=get_font(12), base_color="black", hovering_color="black")
