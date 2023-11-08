@@ -10,8 +10,8 @@ pygame.init()
 SCREEN = pygame.display.set_mode((700, 650))
 BG = pygame.image.load("assets/fondo.png")
 MUSIC = Music("sounds/once-in-paris.mp3")
-MUSIC.set_volume(1)
-MUSIC.play()
+# MUSIC.set_volume(0.5)
+# MUSIC.play()
 
 
 PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 250),

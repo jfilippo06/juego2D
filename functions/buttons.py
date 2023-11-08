@@ -273,3 +273,16 @@ MEDIUN_LEVEL10_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/media
 
 # LEVEL1---------------------------------
 
+HARD_LEVEL1_QUESTION = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/ask.png"), pos=(350, 80),
+                              text_input="¿Tasa de mortalidad tiene el mordisco de la mamba negra?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL1_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="10%", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL1_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="50%", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL1_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="80%", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL1_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel1/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="95%", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL2---------------------------------
+
