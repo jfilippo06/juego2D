@@ -330,3 +330,39 @@ HARD_LEVEL5_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/dificil/
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
 HARD_LEVEL5_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel5/4.png"), pos=POSITIONS_ANIMALS[3],
                              text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL6---------------------------------
+HARD_LEVEL6_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK,
+                              text_input="¿Qué sabor no perciben los gatos?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL6_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel6/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL6_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel6/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL6_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel6/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL6_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel6/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL7---------------------------------
+HARD_LEVEL7_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="Cuantos dientes tienen los mosquitos?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL7_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="47", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL7_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="30", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL7_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="50", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL7_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="0", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL8---------------------------------
+HARD_LEVEL8_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="Cuánto duermen los caracoles de áreas cálidas?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL8_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="2 días", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL8_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="3 años", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL8_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="5 años", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL8_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="3 semanas", font=get_font(12), base_color="black", hovering_color="black")
