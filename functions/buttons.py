@@ -366,3 +366,15 @@ HARD_LEVEL8_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), p
                              text_input="5 años", font=get_font(12), base_color="black", hovering_color="black")
 HARD_LEVEL8_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
                              text_input="3 semanas", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL9---------------------------------
+HARD_LEVEL9_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="Cuánto sobrevive un cocodrilo sumergido en el agua?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL9_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="2 horas", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL9_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="3 días", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL9_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="5 horas", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL9_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="20 minutos", font=get_font(12), base_color="black", hovering_color="black")
