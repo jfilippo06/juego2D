@@ -116,7 +116,7 @@ def lifeClockEasy():
         generado_niveles_easy = obtener_elemento(easy_levels)
         LOSE_MUSIC.play()
         perdiste.perdedor()
-    countdown.reset_timer(90)
+    countdown.reset_timer(60)
     FAIL_SOUND.play()
     life.restar_vida()
 
@@ -130,7 +130,7 @@ def lifeClockMediun():
         generado_niveles_mediun = obtener_elemento(mediun_levels)
         LOSE_MUSIC.play()
         perdiste.perdedor()
-    countdown.reset_timer(60)
+    countdown.reset_timer(45)
     FAIL_SOUND.play()
     life.restar_vida()
 
@@ -237,7 +237,6 @@ def ganadorEasy():
     global get_name_levels
     get_name_levels = name_levels()
     VICTORY_SOUND.play()
-    countdown.start_timer(90)
     reset_counter()
     niveles_aleatorios_easy()
 
@@ -246,7 +245,6 @@ def ganadorMediun():
     global get_name_levels
     get_name_levels = name_levels()
     VICTORY_SOUND.play()
-    countdown.start_timer(60)
     reset_counter()
     niveles_aleatorios_mediun()
 
@@ -255,7 +253,6 @@ def ganadorHard():
     global get_name_levels2
     get_name_levels2 = name_levels2()
     VICTORY_SOUND.play()
-    countdown.start_timer(30)
     reset_counter()
     niveles_aleatorios_hard()
 
@@ -288,14 +285,14 @@ def main_menu():
                     update_positions(buttons_easy)
                     MUSIC.play()
                     MUSIC.set_volume(1)
-                    countdown.start_timer(90)
+                    countdown.start_timer(60)
                     niveles_aleatorios_easy()
                 if MEDIUN_BUTTON.checkForInput(MENU_MOUSE_POS):
                     update_positions(buttons_mediun)
                     update_positions_buttons(buttons_mediun_answers)
                     MUSIC.play()
                     MUSIC.set_volume(1)
-                    countdown.start_timer(60)
+                    countdown.start_timer(45)
                     niveles_aleatorios_mediun()
                 if HARD_BUTTON.checkForInput(MENU_MOUSE_POS):
                     update_positions(buttons_hard)
