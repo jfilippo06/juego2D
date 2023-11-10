@@ -402,3 +402,15 @@ HARD_LEVEL11_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), 
                              text_input="Salta", font=get_font(12), base_color="black", hovering_color="black")
 HARD_LEVEL11_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
                              text_input="Nada", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL12---------------------------------
+HARD_LEVEL12_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="Cuantas serpientes venenosas hay en Venezuela?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL12_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="5", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL12_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="8", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL12_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="2", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL12_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="6", font=get_font(12), base_color="black", hovering_color="black")
