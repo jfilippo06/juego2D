@@ -378,3 +378,27 @@ HARD_LEVEL9_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), p
                              text_input="5 horas", font=get_font(12), base_color="black", hovering_color="black")
 HARD_LEVEL9_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
                              text_input="20 minutos", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL10---------------------------------
+HARD_LEVEL10_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="Cuánto puede dormir una jirafa?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL10_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="20 minutos", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL10_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="1 hora", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL10_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="30 minutos", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL10_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="5 horas", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL11---------------------------------
+HARD_LEVEL11_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="¿Cómo se mueve un hipopótamo debajo del agua?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL11_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="Camina", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL11_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="Corre", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL11_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="Salta", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL11_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="Nada", font=get_font(12), base_color="black", hovering_color="black")
