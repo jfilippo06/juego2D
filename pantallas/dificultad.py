@@ -134,11 +134,11 @@ def lifeClockMediun():
 
 
 def lifeClockHard():
-    global generado_niveles_hard, get_name_levels
+    global generado_niveles_hard, get_name_levels2
     if life.LIFE <= 1:
         life.LIFE = 5
-        reset_gen()
-        get_name_levels = name_levels()
+        reset_gen2()
+        get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
         # LOSE_MUSIC.play()
         perdiste.perdedor()
@@ -180,11 +180,11 @@ def lifeButtonMediun(COUNTER):
 
 
 def lifeButtonHard(COUNTER):
-    global generado_niveles_hard, get_name_levels
+    global generado_niveles_hard, get_name_levels2
     if life.LIFE <= 1:
         life.LIFE = 5
-        reset_gen()
-        get_name_levels = name_levels()
+        reset_gen2()
+        get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
         # LOSE_MUSIC.play()
         perdiste.perdedor()
@@ -220,9 +220,9 @@ def volverMediun():
 
 
 def volverHard():
-    global generado_niveles_hard, get_name_levels
-    reset_gen()
-    get_name_levels = name_levels()
+    global generado_niveles_hard, get_name_levels2
+    reset_gen2()
+    get_name_levels2 = name_levels2()
     generado_niveles_hard = obtener_elemento(hard_levels)
     life.LIFE = 5
     reset_counter()
@@ -250,8 +250,8 @@ def ganadorMediun():
 
 
 def ganadorHard():
-    global get_name_levels
-    get_name_levels = name_levels()
+    global get_name_levels2
+    get_name_levels2 = name_levels2()
     VICTORY_SOUND.play()
     countdown.start_timer(30)
     reset_counter()
@@ -1193,7 +1193,7 @@ def hard_level1():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1237,7 +1237,7 @@ def hard_level2():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1281,7 +1281,7 @@ def hard_level3():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1325,7 +1325,7 @@ def hard_level4():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1368,7 +1368,7 @@ def hard_level5():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1411,7 +1411,7 @@ def hard_level6():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1455,7 +1455,7 @@ def hard_level7():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1499,7 +1499,7 @@ def hard_level8():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1543,7 +1543,7 @@ def hard_level9():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1587,7 +1587,7 @@ def hard_level10():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1631,7 +1631,7 @@ def hard_level11():
         LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
         LEVEL_BACK_BUTTON.update(SCREEN)
 
-        text(get_name_levels, "black", 12, 50, 14, SCREEN)
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
         text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
         text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
 
@@ -1713,12 +1713,12 @@ def niveles_aleatorios_mediun():
 
 
 def niveles_aleatorios_hard():
-    global generado_niveles_hard, get_name_levels
+    global generado_niveles_hard, get_name_levels2
     siguiente = next(generado_niveles_hard, None)
     if siguiente is None:
         life.LIFE = 5
-        reset_gen()
-        get_name_levels = name_levels()
+        reset_gen2()
+        get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
         YOU_WIN_MUSIC.play()
         ganaste.ganador()
@@ -1747,3 +1747,27 @@ def name_levels():
 
 
 get_name_levels = name_levels()
+
+
+def niveles2():
+    lista_niveles2 = ["Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5", 
+                    "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10",
+                    "Nivel 11", "Nivel 12", "Nivel 13", "Nivel 14"]
+    while True:
+        for nivel2 in lista_niveles2:
+            yield nivel2
+
+
+def reset_gen2():
+    global gen2
+    gen2 = niveles2()
+
+
+gen2 = niveles2()
+
+
+def name_levels2():
+    return next(gen2)
+
+
+get_name_levels2 = name_levels2()
