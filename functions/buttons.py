@@ -414,3 +414,28 @@ HARD_LEVEL12_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), 
                              text_input="2", font=get_font(12), base_color="black", hovering_color="black")
 HARD_LEVEL12_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
                              text_input="6", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL13---------------------------------
+HARD_LEVEL13_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK2,
+                              text_input="Cuál es la serpiente más pequeña del mundo?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL13_ANSWER1 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[0],
+                             text_input="Leptotyhlops Carlae", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL13_ANSWER2 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[1],
+                             text_input="Ciega", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL13_ANSWER3 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[2],
+                             text_input="Anaconda", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL13_ANSWER4 = Button(image=pygame.image.load("assets/button_ask.png"), pos=POSITIONS_BUTTONS[3],
+                             text_input="Coral", font=get_font(12), base_color="black", hovering_color="black")
+
+# LEVEL14---------------------------------
+HARD_LEVEL14_QUESTION = Button(image=pygame.image.load("assets/ask.png"), pos=ASK,
+                              text_input="¿Cuál es el ave voladora más grande del mundo?", font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL14_ANSWER1 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel14/1.png"), pos=POSITIONS_ANIMALS[0],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL14_ANSWER2 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel14/2.png"), pos=POSITIONS_ANIMALS[1],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL14_ANSWER3 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel14/3.png"), pos=POSITIONS_ANIMALS[2],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+HARD_LEVEL14_ANSWER4 = Button(image=pygame.image.load("assets/dificultad/dificil/nivel14/4.png"), pos=POSITIONS_ANIMALS[3],
+                             text_input=None, font=get_font(12), base_color="black", hovering_color="black")
+

@@ -10,13 +10,13 @@ pygame.init()
 SCREEN = pygame.display.set_mode((700, 650))
 BG = pygame.image.load("assets/fondo.png")
 MUSIC = Music("sounds/once-in-paris.mp3")
-# MUSIC.set_volume(0.5)
-# MUSIC.play()
+MUSIC.set_volume(0.5)
+MUSIC.play()
 
 
-PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 250),
+PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 260),
                      text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 370),
+QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 380),
                      text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
 

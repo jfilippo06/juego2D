@@ -40,6 +40,8 @@ from functions.buttons import HARD_LEVEL9_QUESTION, HARD_LEVEL9_ANSWER1, HARD_LE
 from functions.buttons import HARD_LEVEL10_QUESTION, HARD_LEVEL10_ANSWER1, HARD_LEVEL10_ANSWER2, HARD_LEVEL10_ANSWER3, HARD_LEVEL10_ANSWER4
 from functions.buttons import HARD_LEVEL11_QUESTION, HARD_LEVEL11_ANSWER1, HARD_LEVEL11_ANSWER2, HARD_LEVEL11_ANSWER3, HARD_LEVEL11_ANSWER4
 from functions.buttons import HARD_LEVEL12_QUESTION, HARD_LEVEL12_ANSWER1, HARD_LEVEL12_ANSWER2, HARD_LEVEL12_ANSWER3, HARD_LEVEL12_ANSWER4
+from functions.buttons import HARD_LEVEL13_QUESTION, HARD_LEVEL13_ANSWER1, HARD_LEVEL13_ANSWER2, HARD_LEVEL13_ANSWER3, HARD_LEVEL13_ANSWER4
+from functions.buttons import HARD_LEVEL14_QUESTION, HARD_LEVEL14_ANSWER1, HARD_LEVEL14_ANSWER2, HARD_LEVEL14_ANSWER3, HARD_LEVEL14_ANSWER4
 
 pygame.init()
 
@@ -82,7 +84,8 @@ buttons_mediun_answers = [MEDIUN_LEVEL4_ANSWER1, MEDIUN_LEVEL4_ANSWER2, MEDIUN_L
                           MEDIUN_LEVEL10_ANSWER1, MEDIUN_LEVEL10_ANSWER2, MEDIUN_LEVEL10_ANSWER3, MEDIUN_LEVEL10_ANSWER4,]
 
 buttons_hard = [HARD_LEVEL5_ANSWER1, HARD_LEVEL5_ANSWER2, HARD_LEVEL5_ANSWER3, HARD_LEVEL5_ANSWER4,
-                HARD_LEVEL6_ANSWER1, HARD_LEVEL6_ANSWER2, HARD_LEVEL6_ANSWER3, HARD_LEVEL6_ANSWER4,]
+                HARD_LEVEL6_ANSWER1, HARD_LEVEL6_ANSWER2, HARD_LEVEL6_ANSWER3, HARD_LEVEL6_ANSWER4,
+                HARD_LEVEL14_ANSWER1, HARD_LEVEL14_ANSWER2, HARD_LEVEL14_ANSWER3, HARD_LEVEL14_ANSWER4,]
 
 buttons_hard_answers = [HARD_LEVEL1_ANSWER1, HARD_LEVEL1_ANSWER2, HARD_LEVEL1_ANSWER3, HARD_LEVEL1_ANSWER4,
                         HARD_LEVEL2_ANSWER1, HARD_LEVEL2_ANSWER2, HARD_LEVEL2_ANSWER3, HARD_LEVEL2_ANSWER4,
@@ -93,8 +96,8 @@ buttons_hard_answers = [HARD_LEVEL1_ANSWER1, HARD_LEVEL1_ANSWER2, HARD_LEVEL1_AN
                         HARD_LEVEL9_ANSWER1, HARD_LEVEL9_ANSWER2, HARD_LEVEL9_ANSWER3, HARD_LEVEL9_ANSWER4,
                         HARD_LEVEL10_ANSWER1, HARD_LEVEL10_ANSWER2, HARD_LEVEL10_ANSWER3, HARD_LEVEL10_ANSWER4,
                         HARD_LEVEL11_ANSWER1, HARD_LEVEL11_ANSWER2, HARD_LEVEL11_ANSWER3, HARD_LEVEL11_ANSWER4,
-                        HARD_LEVEL12_ANSWER1, HARD_LEVEL12_ANSWER2, HARD_LEVEL12_ANSWER3, HARD_LEVEL12_ANSWER4,]
-
+                        HARD_LEVEL12_ANSWER1, HARD_LEVEL12_ANSWER2, HARD_LEVEL12_ANSWER3, HARD_LEVEL12_ANSWER4,
+                        HARD_LEVEL13_ANSWER1, HARD_LEVEL13_ANSWER2, HARD_LEVEL13_ANSWER3, HARD_LEVEL13_ANSWER4,]
 
 
 def update_positions(buttons):
@@ -142,7 +145,7 @@ def lifeClockHard():
         reset_gen2()
         get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
-        # LOSE_MUSIC.play()
+        LOSE_MUSIC.play()
         perdiste.perdedor()
     countdown.reset_timer(30)
     FAIL_SOUND.play()
@@ -188,7 +191,7 @@ def lifeButtonHard(COUNTER):
         reset_gen2()
         get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
-        # LOSE_MUSIC.play()
+        LOSE_MUSIC.play()
         perdiste.perdedor()
     else:
         if COUNTER.counter:
@@ -228,8 +231,8 @@ def volverHard():
     generado_niveles_hard = obtener_elemento(hard_levels)
     life.LIFE = 5
     reset_counter()
-    # MUSIC_MENU.play()
-    # MUSIC_MENU.set_volume(0.5)
+    MUSIC_MENU.play()
+    MUSIC_MENU.set_volume(0.5)
     dificultad.main_menu()
 
 
@@ -297,8 +300,8 @@ def main_menu():
                 if HARD_BUTTON.checkForInput(MENU_MOUSE_POS):
                     update_positions(buttons_hard)
                     update_positions_buttons(buttons_hard_answers)
-                    # MUSIC.play()
-                    # MUSIC.set_volume(1)
+                    MUSIC.play()
+                    MUSIC.set_volume(1)
                     countdown.start_timer(30)
                     niveles_aleatorios_hard()
                 if BACK_BUTTON.checkForInput(MENU_MOUSE_POS):
@@ -1176,6 +1179,8 @@ def mediun_level10():
         clock.tick(60)
 
 # HARD LEVES---------------------------------------------
+
+
 def hard_level1():
     while True:
         BG = pygame.image.load("assets/dificultad/dificil/nivel1/fondo.png")
@@ -1701,18 +1706,106 @@ def hard_level12():
         countdown.check_timer_event()
         clock.tick(60)
 
+
+def hard_level13():
+    while True:
+        BG = pygame.image.load("assets/dificultad/dificil/nivel13/fondo.png")
+        SCREEN.blit(BG, (0, 25))
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        for button in [HARD_LEVEL13_ANSWER1, HARD_LEVEL13_ANSWER2, HARD_LEVEL13_ANSWER3, HARD_LEVEL13_ANSWER4, HARD_LEVEL13_QUESTION]:
+            button.update(SCREEN)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
+        LEVEL_BACK_BUTTON.update(SCREEN)
+
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockMediun()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if HARD_LEVEL13_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    ganadorHard()
+                if HARD_LEVEL13_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonHard(COUNTER1)
+                if HARD_LEVEL13_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonHard(COUNTER2)
+                if HARD_LEVEL13_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonHard(COUNTER3)
+                if LEVEL_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverHard()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
+
+def hard_level14():
+    while True:
+        SCREEN.fill("white")
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+        HEARTS = str(life.LIFE)
+
+        for button in [HARD_LEVEL14_ANSWER1, HARD_LEVEL14_ANSWER2, HARD_LEVEL14_ANSWER3, HARD_LEVEL14_ANSWER4, HARD_LEVEL14_QUESTION]:
+            button.update(SCREEN)
+
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 0, 800, 25))
+        pygame.draw.rect(SCREEN, "#E8B03F", pygame.Rect(0, 625, 800, 25))
+
+        LEVEL_BACK_BUTTON.changeColor(PLAY_MOUSE_POS)
+        LEVEL_BACK_BUTTON.update(SCREEN)
+
+        text(get_name_levels2, "black", 12, 50, 14, SCREEN)
+        text(f"Vidas:{HEARTS}", "black", 12,  650, 14, SCREEN)
+        text("Tiempo:" + countdown.get_time(), "black", 12, 625, 640, SCREEN)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == countdown.timer_event:
+                lifeClockMediun()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if HARD_LEVEL14_ANSWER1.checkForInput(PLAY_MOUSE_POS):
+                    ganadorHard()
+                if HARD_LEVEL14_ANSWER2.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonHard(COUNTER1)
+                if HARD_LEVEL14_ANSWER3.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonHard(COUNTER2)
+                if HARD_LEVEL14_ANSWER4.checkForInput(PLAY_MOUSE_POS):
+                    lifeButtonHard(COUNTER3)
+                if LEVEL_BACK_BUTTON.checkForInput(PLAY_MOUSE_POS):
+                    volverHard()
+
+        pygame.display.update()
+        pygame.display.flip()
+        countdown.check_timer_event()
+        clock.tick(60)
+
+
 easy_levels = [
     easy_level1, easy_level2, easy_level3, easy_level4, easy_level5,
     easy_level6, easy_level7, easy_level8, easy_level9, easy_level10
 ]
 mediun_levels = [
-    mediun_level1, mediun_level2, mediun_level3, mediun_level4, mediun_level5, 
+    mediun_level1, mediun_level2, mediun_level3, mediun_level4, mediun_level5,
     mediun_level6, mediun_level7, mediun_level8, mediun_level9, mediun_level10
 ]
 hard_levels = [
     hard_level1, hard_level2, hard_level3, hard_level4, hard_level5,
     hard_level6, hard_level7, hard_level8, hard_level9, hard_level10,
-    hard_level11, hard_level12
+    hard_level11, hard_level12, hard_level13, hard_level14
 ]
 
 
@@ -1793,9 +1886,9 @@ get_name_levels = name_levels()
 
 
 def niveles2():
-    lista_niveles2 = ["Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5", 
-                    "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10",
-                    "Nivel 11", "Nivel 12", "Nivel 13", "Nivel 14"]
+    lista_niveles2 = ["Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5",
+                      "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10",
+                      "Nivel 11", "Nivel 12", "Nivel 13", "Nivel 14"]
     while True:
         for nivel2 in lista_niveles2:
             yield nivel2
