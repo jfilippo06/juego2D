@@ -115,6 +115,7 @@ def lifeClockEasy():
     if life.LIFE <= 1:
         life.LIFE = 5
         reset_gen()
+        reset_counter()
         get_name_levels = name_levels()
         generado_niveles_easy = obtener_elemento(easy_levels)
         LOSE_MUSIC.play()
@@ -129,6 +130,7 @@ def lifeClockMediun():
     if life.LIFE <= 1:
         life.LIFE = 5
         reset_gen()
+        reset_counter()
         get_name_levels = name_levels()
         generado_niveles_mediun = obtener_elemento(mediun_levels)
         LOSE_MUSIC.play()
@@ -143,6 +145,7 @@ def lifeClockHard():
     if life.LIFE <= 1:
         life.LIFE = 5
         reset_gen2()
+        reset_counter()
         get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
         LOSE_MUSIC.play()
