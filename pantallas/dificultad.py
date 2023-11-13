@@ -118,7 +118,7 @@ def lifeClockEasy():
         get_name_levels = name_levels()
         generado_niveles_easy = obtener_elemento(easy_levels)
         LOSE_MUSIC.play()
-        perdiste.perdedor()
+        perdiste.perdedor_facil()
     countdown.reset_timer(60)
     FAIL_SOUND.play()
     life.restar_vida()
@@ -132,7 +132,7 @@ def lifeClockMediun():
         get_name_levels = name_levels()
         generado_niveles_mediun = obtener_elemento(mediun_levels)
         LOSE_MUSIC.play()
-        perdiste.perdedor()
+        perdiste.perdedor_medio()
     countdown.reset_timer(45)
     FAIL_SOUND.play()
     life.restar_vida()
@@ -146,7 +146,7 @@ def lifeClockHard():
         get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
         LOSE_MUSIC.play()
-        perdiste.perdedor()
+        perdiste.perdedor_dificil()
     countdown.reset_timer(30)
     FAIL_SOUND.play()
     life.restar_vida()
@@ -157,10 +157,11 @@ def lifeButtonEasy(COUNTER):
     if life.LIFE <= 1:
         life.LIFE = 5
         reset_gen()
+        reset_counter()
         get_name_levels = name_levels()
         generado_niveles_easy = obtener_elemento(easy_levels)
         LOSE_MUSIC.play()
-        perdiste.perdedor()
+        perdiste.perdedor_facil()
     else:
         if COUNTER.counter:
             COUNTER.off_counter()
@@ -173,10 +174,11 @@ def lifeButtonMediun(COUNTER):
     if life.LIFE <= 1:
         life.LIFE = 5
         reset_gen()
+        reset_counter()
         get_name_levels = name_levels()
         generado_niveles_mediun = obtener_elemento(mediun_levels)
         LOSE_MUSIC.play()
-        perdiste.perdedor()
+        perdiste.perdedor_medio()
     else:
         if COUNTER.counter:
             COUNTER.off_counter()
@@ -189,10 +191,11 @@ def lifeButtonHard(COUNTER):
     if life.LIFE <= 1:
         life.LIFE = 5
         reset_gen2()
+        reset_counter()
         get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
         LOSE_MUSIC.play()
-        perdiste.perdedor()
+        perdiste.perdedor_dificil()
     else:
         if COUNTER.counter:
             COUNTER.off_counter()
@@ -1824,12 +1827,13 @@ def niveles_aleatorios_easy():
     global generado_niveles_easy, get_name_levels
     siguiente = next(generado_niveles_easy, None)
     if siguiente is None:
-        life.LIFE = 5
+        YOU_WIN_MUSIC.play()
         reset_gen()
+        reset_counter()
         get_name_levels = name_levels()
         generado_niveles_easy = obtener_elemento(easy_levels)
-        YOU_WIN_MUSIC.play()
-        ganaste.ganador()
+        life.LIFE = 5
+        ganaste.ganador_facil()
     else:
         siguiente()
 
@@ -1838,12 +1842,13 @@ def niveles_aleatorios_mediun():
     global generado_niveles_mediun, get_name_levels
     siguiente = next(generado_niveles_mediun, None)
     if siguiente is None:
-        life.LIFE = 5
+        YOU_WIN_MUSIC.play()
         reset_gen()
+        reset_counter()
         get_name_levels = name_levels()
         generado_niveles_mediun = obtener_elemento(mediun_levels)
-        YOU_WIN_MUSIC.play()
-        ganaste.ganador()
+        life.LIFE = 5
+        ganaste.ganador_medio()
     else:
         siguiente()
 
@@ -1852,12 +1857,13 @@ def niveles_aleatorios_hard():
     global generado_niveles_hard, get_name_levels2
     siguiente = next(generado_niveles_hard, None)
     if siguiente is None:
-        life.LIFE = 5
+        YOU_WIN_MUSIC.play()
         reset_gen2()
+        reset_counter()
         get_name_levels2 = name_levels2()
         generado_niveles_hard = obtener_elemento(hard_levels)
-        YOU_WIN_MUSIC.play()
-        ganaste.ganador()
+        life.LIFE = 5
+        ganaste.ganador_dificil()
     else:
         siguiente()
 
