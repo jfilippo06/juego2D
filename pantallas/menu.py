@@ -9,6 +9,7 @@ pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
 BG = pygame.image.load("assets/fondo.png")
+ICO = pygame.image.load("assets/fondo_circulo.png")
 MUSIC = Music("sounds/once-in-paris.mp3")
 MUSIC.set_volume(0.5)
 MUSIC.play()
@@ -22,12 +23,13 @@ QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 380
 
 def main_menu():
     while True:
-        pygame.display.set_caption("Animal Questions")
+        pygame.display.set_caption("Animal Quiz")
+        pygame.display.set_icon(ICO)
 
         SCREEN.blit(BG, (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        text("ANIMAL QUESTIONS", "#b68f40", 40, 360, 110, SCREEN)
+        text("ANIMAL QUIZ", "#b68f40", 40, 360, 110, SCREEN)
 
         for button in [PLAY_BUTTON, QUIT_BUTTON]:
             button.changeColor(MENU_MOUSE_POS)
