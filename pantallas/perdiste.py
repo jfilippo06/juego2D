@@ -1,14 +1,13 @@
 import pygame
 import sys
 from clases.button import Button
-from clases.music import Music
 from functions.functions import get_font, text
 from pantallas import menu
+from rutas import MUSIC, FONDO_FACIL, FONDO_MEDIO, FONDO_DIFICIL
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
-MUSIC = Music("sounds/once-in-paris.mp3")
 
 PLAY_BACK = Button(image=None, pos=(370, 330),
                    text_input="VOLVER AL MENU PRINCIPAL", font=get_font(22), base_color="White", hovering_color="Green")
@@ -17,8 +16,7 @@ PLAY_BACK = Button(image=None, pos=(370, 330),
 def perdedor_facil():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        BG = pygame.image.load("assets/perdedor_facil.png")
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.blit(FONDO_FACIL, (0, 0))
 
         text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 
@@ -41,8 +39,7 @@ def perdedor_facil():
 def perdedor_medio():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        BG = pygame.image.load("assets/perdedor_medio.png")
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.blit(FONDO_MEDIO, (0, 0))
 
         text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 
@@ -65,8 +62,7 @@ def perdedor_medio():
 def perdedor_dificil():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        BG = pygame.image.load("assets/perdedor_dificil.png")
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.blit(FONDO_DIFICIL, (0, 0))
 
         text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 

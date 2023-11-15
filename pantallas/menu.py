@@ -1,17 +1,13 @@
 import pygame
 import sys
 from clases.button import Button
-from clases.music import Music
 from functions.functions import get_font, text
 from pantallas import dificultad
-from rutas import BG, ICO, MUSIC, BUTTON
+from rutas import FONDO_MENU, ICO, MUSIC, BUTTON
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
-# pygame.image.load(BG)
-# ICO = pygame.image.load("assets/fondo_circulo.png")
-# MUSIC = Music("sounds/once-in-paris.mp3")
 MUSIC.set_volume(0.5)
 MUSIC.play()
 
@@ -27,7 +23,7 @@ def main_menu():
         pygame.display.set_caption("Animal Quiz")
         pygame.display.set_icon(ICO)
 
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.blit(FONDO_MENU, (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
         text("ANIMAL QUIZ", "#b68f40", 40, 360, 110, SCREEN)
