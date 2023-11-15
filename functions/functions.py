@@ -1,7 +1,8 @@
 import pygame
+from rutas import FONT
 
 def get_font(size):
-    return pygame.font.Font("assets/font.ttf", size)
+    return pygame.font.Font(FONT, size)
 
 def text(texto, color, zise, x, y, screen):
     TEXT = get_font(zise).render(texto, True, color)

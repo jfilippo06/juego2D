@@ -4,20 +4,21 @@ from clases.button import Button
 from clases.music import Music
 from functions.functions import get_font, text
 from pantallas import dificultad
+from rutas import BG, ICO, MUSIC, BUTTON
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
-BG = pygame.image.load("assets/fondo.png")
-ICO = pygame.image.load("assets/fondo_circulo.png")
-MUSIC = Music("sounds/once-in-paris.mp3")
+# pygame.image.load(BG)
+# ICO = pygame.image.load("assets/fondo_circulo.png")
+# MUSIC = Music("sounds/once-in-paris.mp3")
 MUSIC.set_volume(0.5)
 MUSIC.play()
 
 
-PLAY_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 260),
+PLAY_BUTTON = Button(image=BUTTON, pos=(360, 260),
                      text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-QUIT_BUTTON = Button(image=pygame.image.load("assets/button.png"), pos=(360, 380),
+QUIT_BUTTON = Button(image=BUTTON, pos=(360, 380),
                      text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
 
