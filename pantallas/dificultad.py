@@ -46,7 +46,6 @@ from rutas import getPath, getPathMusic, getPathSounds
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
-BG = getPath("assets/fondo.png")
 
 MUSIC =  getPathMusic("sounds/thinking-time.mp3")
 MUSIC_MENU = getPathMusic("sounds/once-in-paris.mp3")
@@ -278,7 +277,7 @@ def reset_counter():
 
 def main_menu():
     while True:
-        SCREEN.blit(BG, (0, 0))
+        SCREEN.blit(getPath("assets/fondo.png"), (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
         text("DIFICULTAD", "#b68f40", 40, 360, 100, SCREEN)
@@ -883,8 +882,7 @@ def mediun_level3():
 
 def mediun_level4():
     while True:
-        BG = getPath("assets/dificultad/media/nivel4/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/media/nivel4/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -927,8 +925,7 @@ def mediun_level4():
 
 def mediun_level5():
     while True:
-        BG = getPath("assets/dificultad/media/nivel5/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/media/nivel5/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -971,8 +968,7 @@ def mediun_level5():
 
 def mediun_level6():
     while True:
-        BG = getPath("assets/dificultad/media/nivel6/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/media/nivel6/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1015,8 +1011,7 @@ def mediun_level6():
 
 def mediun_level7():
     while True:
-        BG = getPath("assets/dificultad/media/nivel7/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/media/nivel7/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1145,8 +1140,7 @@ def mediun_level9():
 
 def mediun_level10():
     while True:
-        BG = getPath("assets/dificultad/media/nivel10/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/media/nivel10/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1191,8 +1185,7 @@ def mediun_level10():
 
 def hard_level1():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel1/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel1/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1235,8 +1228,7 @@ def hard_level1():
 
 def hard_level2():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel2/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel2/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1279,8 +1271,7 @@ def hard_level2():
 
 def hard_level3():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel3/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel3/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1323,8 +1314,7 @@ def hard_level3():
 
 def hard_level4():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel4/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel4/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1453,8 +1443,7 @@ def hard_level6():
 
 def hard_level7():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel7/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel7/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1497,8 +1486,7 @@ def hard_level7():
 
 def hard_level8():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel8/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel8/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1541,8 +1529,7 @@ def hard_level8():
 
 def hard_level9():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel9/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel9/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1585,8 +1572,7 @@ def hard_level9():
 
 def hard_level10():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel10/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel10/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1629,8 +1615,7 @@ def hard_level10():
 
 def hard_level11():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel11/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel11/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1673,8 +1658,7 @@ def hard_level11():
 
 def hard_level12():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel12/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel12/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
@@ -1717,8 +1701,7 @@ def hard_level12():
 
 def hard_level13():
     while True:
-        BG = getPath("assets/dificultad/dificil/nivel13/fondo.png")
-        SCREEN.blit(BG, (0, 25))
+        SCREEN.blit(getPath("assets/dificultad/dificil/nivel13/fondo.png"), (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
 
