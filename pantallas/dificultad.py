@@ -42,18 +42,13 @@ from functions.buttons import HARD_LEVEL11_QUESTION, HARD_LEVEL11_ANSWER1, HARD_
 from functions.buttons import HARD_LEVEL12_QUESTION, HARD_LEVEL12_ANSWER1, HARD_LEVEL12_ANSWER2, HARD_LEVEL12_ANSWER3, HARD_LEVEL12_ANSWER4
 from functions.buttons import HARD_LEVEL13_QUESTION, HARD_LEVEL13_ANSWER1, HARD_LEVEL13_ANSWER2, HARD_LEVEL13_ANSWER3, HARD_LEVEL13_ANSWER4
 from functions.buttons import HARD_LEVEL14_QUESTION, HARD_LEVEL14_ANSWER1, HARD_LEVEL14_ANSWER2, HARD_LEVEL14_ANSWER3, HARD_LEVEL14_ANSWER4
+from rutas import getPath, MUSIC, MUSIC_MENU, LOSE_MUSIC, YOU_WIN_MUSIC, VICTORY_SOUND, FAIL_SOUND
+
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
-BG = pygame.image.load("assets/fondo.png")
-
-MUSIC = Music("sounds/thinking-time.mp3")
-MUSIC_MENU = Music("sounds/once-in-paris.mp3")
-LOSE_MUSIC = Music("sounds/lose.mp3")
-YOU_WIN_MUSIC = Music("sounds/winner.mp3")
-VICTORY_SOUND = Sounds("sounds/victory.mp3")
-FAIL_SOUND = Sounds("sounds/fail.mp3")
+BG = getPath("assets/fondo.png")
 
 COUNTER1 = Counter()
 COUNTER2 = Counter()
@@ -881,7 +876,7 @@ def mediun_level3():
 
 def mediun_level4():
     while True:
-        BG = pygame.image.load("assets/dificultad/media/nivel4/fondo.png")
+        BG = getPath("assets/dificultad/media/nivel4/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -925,7 +920,7 @@ def mediun_level4():
 
 def mediun_level5():
     while True:
-        BG = pygame.image.load("assets/dificultad/media/nivel5/fondo.png")
+        BG = getPath("assets/dificultad/media/nivel5/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -969,7 +964,7 @@ def mediun_level5():
 
 def mediun_level6():
     while True:
-        BG = pygame.image.load("assets/dificultad/media/nivel6/fondo.png")
+        BG = getPath("assets/dificultad/media/nivel6/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1013,7 +1008,7 @@ def mediun_level6():
 
 def mediun_level7():
     while True:
-        BG = pygame.image.load("assets/dificultad/media/nivel7/fondo.png")
+        BG = getPath("assets/dificultad/media/nivel7/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1143,7 +1138,7 @@ def mediun_level9():
 
 def mediun_level10():
     while True:
-        BG = pygame.image.load("assets/dificultad/media/nivel10/fondo.png")
+        BG = getPath("assets/dificultad/media/nivel10/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1189,7 +1184,7 @@ def mediun_level10():
 
 def hard_level1():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel1/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel1/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1233,7 +1228,7 @@ def hard_level1():
 
 def hard_level2():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel2/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel2/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1277,7 +1272,7 @@ def hard_level2():
 
 def hard_level3():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel3/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel3/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1321,7 +1316,7 @@ def hard_level3():
 
 def hard_level4():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel4/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel4/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1451,7 +1446,7 @@ def hard_level6():
 
 def hard_level7():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel7/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel7/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1495,7 +1490,7 @@ def hard_level7():
 
 def hard_level8():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel8/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel8/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1539,7 +1534,7 @@ def hard_level8():
 
 def hard_level9():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel9/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel9/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1583,7 +1578,7 @@ def hard_level9():
 
 def hard_level10():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel10/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel10/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1627,7 +1622,7 @@ def hard_level10():
 
 def hard_level11():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel11/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel11/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1671,7 +1666,7 @@ def hard_level11():
 
 def hard_level12():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel12/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel12/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
@@ -1715,7 +1710,7 @@ def hard_level12():
 
 def hard_level13():
     while True:
-        BG = pygame.image.load("assets/dificultad/dificil/nivel13/fondo.png")
+        BG = getPath("assets/dificultad/dificil/nivel13/fondo.png")
         SCREEN.blit(BG, (0, 25))
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
         HEARTS = str(life.LIFE)
