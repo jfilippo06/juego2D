@@ -3,11 +3,12 @@ import sys
 from clases.button import Button
 from functions.functions import get_font, text
 from pantallas import menu
-from rutas import MUSIC_MENU, FONDO_GANADOR_FACIL, FONDO_GANADOR_MEDIO, FONDO_GANADOR_DIFICIL
+from rutas import getPath, getPathMusic
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
+MUSIC_MENU =  getPathMusic("sounds/once-in-paris.mp3")
 
 PLAY_BACK = Button(image=None, pos=(370, 330),
                    text_input="VOLVER AL MENU PRINCIPAL", font=get_font(22), base_color="White", hovering_color="Green")
@@ -16,7 +17,7 @@ PLAY_BACK = Button(image=None, pos=(370, 330),
 def ganador_facil():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(FONDO_GANADOR_FACIL, (0, 0))
+        SCREEN.blit(getPath("assets/ganador_facil.png"), (0, 0))
         text("HAZ GANADO", "white", 40, 370, 230, SCREEN)
 
         PLAY_BACK.changeColor(PLAY_MOUSE_POS)
@@ -38,7 +39,7 @@ def ganador_facil():
 def ganador_medio():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(FONDO_GANADOR_MEDIO, (0, 0))
+        SCREEN.blit(getPath("assets/ganador_medio.png"), (0, 0))
         text("HAZ GANADO", "white", 40, 370, 230, SCREEN)
 
         PLAY_BACK.changeColor(PLAY_MOUSE_POS)
@@ -60,7 +61,7 @@ def ganador_medio():
 def ganador_dificil():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(FONDO_GANADOR_DIFICIL, (0, 0))
+        SCREEN.blit(getPath("assets/ganador_dificil.png"), (0, 0))
         text("HAZ GANADO", "white", 40, 370, 230, SCREEN)
 
         PLAY_BACK.changeColor(PLAY_MOUSE_POS)

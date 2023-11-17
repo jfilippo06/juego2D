@@ -3,27 +3,28 @@ import sys
 from clases.button import Button
 from functions.functions import get_font, text
 from pantallas import dificultad
-from rutas import FONDO_MENU, ICO, MUSIC_MENU, BUTTON
+from rutas import getPath, getPathMusic
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
+MUSIC_MENU =  getPathMusic("sounds/once-in-paris.mp3")
 MUSIC_MENU.set_volume(0.5)
-# MUSIC_MENU.play()
+MUSIC_MENU.play()
 
 
-PLAY_BUTTON = Button(image=BUTTON, pos=(360, 260),
+PLAY_BUTTON = Button(getPath("assets/button.png"), pos=(360, 260),
                      text_input="INICIAR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-QUIT_BUTTON = Button(image=BUTTON, pos=(360, 380),
+QUIT_BUTTON = Button(getPath("assets/button.png"), pos=(360, 380),
                      text_input="SALIR", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
 
 def main_menu():
     while True:
         pygame.display.set_caption("Animal Quiz")
-        pygame.display.set_icon(ICO)
+        pygame.display.set_icon(getPath("assets/fondo_circulo.png"))
 
-        SCREEN.blit(FONDO_MENU, (0, 0))
+        SCREEN.blit(getPath("assets/fondo.png"), (0, 0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
         text("ANIMAL QUIZ", "#b68f40", 40, 360, 110, SCREEN)

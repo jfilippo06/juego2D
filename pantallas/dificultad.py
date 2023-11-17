@@ -1,7 +1,6 @@
 import pygame
 import sys
 import random
-from clases.music import Music, Sounds
 from clases.contador import Counter
 from clases.button import Button
 from functions.functions import text
@@ -42,13 +41,21 @@ from functions.buttons import HARD_LEVEL11_QUESTION, HARD_LEVEL11_ANSWER1, HARD_
 from functions.buttons import HARD_LEVEL12_QUESTION, HARD_LEVEL12_ANSWER1, HARD_LEVEL12_ANSWER2, HARD_LEVEL12_ANSWER3, HARD_LEVEL12_ANSWER4
 from functions.buttons import HARD_LEVEL13_QUESTION, HARD_LEVEL13_ANSWER1, HARD_LEVEL13_ANSWER2, HARD_LEVEL13_ANSWER3, HARD_LEVEL13_ANSWER4
 from functions.buttons import HARD_LEVEL14_QUESTION, HARD_LEVEL14_ANSWER1, HARD_LEVEL14_ANSWER2, HARD_LEVEL14_ANSWER3, HARD_LEVEL14_ANSWER4
-from rutas import getPath, MUSIC, MUSIC_MENU, LOSE_MUSIC, YOU_WIN_MUSIC, VICTORY_SOUND, FAIL_SOUND
-
+from rutas import getPath, getPathMusic, getPathSounds
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
 BG = getPath("assets/fondo.png")
+
+MUSIC =  getPathMusic("sounds/thinking-time.mp3")
+MUSIC_MENU = getPathMusic("sounds/once-in-paris.mp3")
+LOSE_MUSIC = getPathMusic("sounds/lose.mp3")
+YOU_WIN_MUSIC = getPathMusic("sounds/winner.mp3")
+VICTORY_SOUND = getPathSounds("sounds/victory.mp3")
+FAIL_SOUND = getPathSounds("sounds/fail.mp3")
+
+
 
 COUNTER1 = Counter()
 COUNTER2 = Counter()
