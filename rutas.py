@@ -3,7 +3,7 @@ import pygame
 from clases.music import Music, Sounds
 
 # RUTA PRICIPAL
-RUTA_PRINCIPAL = 'C:\MisProyectos\Python\Pygame\juego2D'
+RUTA_PRINCIPAL = 'C:\Program Files\Animal Quiz\_internal'
 
 # FONT
 FONT = "assets/font.ttf"
