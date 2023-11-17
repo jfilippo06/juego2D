@@ -10,6 +10,12 @@ FONT = "assets/font.ttf"
 FONT = os.path.join(RUTA_PRINCIPAL, FONT)
 FONT = os.path.abspath(FONT)
 
+# ICO
+ICO = "assets/fondo_circulo.png"
+ICO = os.path.join(RUTA_PRINCIPAL, ICO)
+ICO = os.path.abspath(ICO)
+ICO = pygame.image.load(ICO)
+
 # FONDO MENU
 FONDO_MENU = "assets/fondo.png"
 FONDO_MENU = os.path.join(RUTA_PRINCIPAL, FONDO_MENU)
@@ -17,34 +23,46 @@ FONDO_MENU = os.path.abspath(FONDO_MENU)
 FONDO_MENU = pygame.image.load(FONDO_MENU)
 
 # FONDO PEDEDOR FACIL
-FONDO_FACIL = "assets/perdedor_facil.png"
-FONDO_FACIL = os.path.join(RUTA_PRINCIPAL, FONDO_FACIL)
-FONDO_FACIL = os.path.abspath(FONDO_FACIL)
-FONDO_FACIL = pygame.image.load(FONDO_FACIL)
+FONDO_PERDEDOR_FACIL = "assets/perdedor_facil.png"
+FONDO_PERDEDOR_FACIL = os.path.join(RUTA_PRINCIPAL, FONDO_PERDEDOR_FACIL)
+FONDO_PERDEDOR_FACIL = os.path.abspath(FONDO_PERDEDOR_FACIL)
+FONDO_PERDEDOR_FACIL = pygame.image.load(FONDO_PERDEDOR_FACIL)
 
 # FONDO PEDEDOR MEDIO
-FONDO_MEDIO = "assets/perdedor_medio.png"
-FONDO_MEDIO = os.path.join(RUTA_PRINCIPAL, FONDO_MEDIO)
-FONDO_MEDIO = os.path.abspath(FONDO_MEDIO)
-FONDO_MEDIO = pygame.image.load(FONDO_MEDIO)
+FONDO_PERDEDOR_MEDIO = "assets/perdedor_medio.png"
+FONDO_PERDEDOR_MEDIO = os.path.join(RUTA_PRINCIPAL, FONDO_PERDEDOR_MEDIO)
+FONDO_PERDEDOR_MEDIO = os.path.abspath(FONDO_PERDEDOR_MEDIO)
+FONDO_PERDEDOR_MEDIO = pygame.image.load(FONDO_PERDEDOR_MEDIO)
 
 # FONDO PEDEDOR DIFICIL
-FONDO_DIFICIL = "assets/perdedor_dificil.png"
-FONDO_DIFICIL = os.path.join(RUTA_PRINCIPAL, FONDO_DIFICIL)
-FONDO_DIFICIL = os.path.abspath(FONDO_DIFICIL)
-FONDO_DIFICIL = pygame.image.load(FONDO_DIFICIL)
+FONDO_PERDEDOR_DIFICIL = "assets/perdedor_dificil.png"
+FONDO_PERDEDOR_DIFICIL = os.path.join(RUTA_PRINCIPAL, FONDO_PERDEDOR_DIFICIL)
+FONDO_PERDEDOR_DIFICIL = os.path.abspath(FONDO_PERDEDOR_DIFICIL)
+FONDO_PERDEDOR_DIFICIL = pygame.image.load(FONDO_PERDEDOR_DIFICIL)
 
-# ICO
-FONDO_ICO = "assets/fondo_circulo.png"
-FONDO_ICO = os.path.join(RUTA_PRINCIPAL, FONDO_ICO)
-FONDO_ICO = os.path.abspath(FONDO_ICO)
-ICO = pygame.image.load(FONDO_ICO)
+# FONDO GANADOR FACIL
+FONDO_GANADOR_FACIL = "assets/ganador_facil.png"
+FONDO_GANADOR_FACIL = os.path.join(RUTA_PRINCIPAL, FONDO_GANADOR_FACIL)
+FONDO_GANADOR_FACIL = os.path.abspath(FONDO_GANADOR_FACIL)
+FONDO_GANADOR_FACIL = pygame.image.load(FONDO_GANADOR_FACIL)
+
+# FONDO GANADOR MEDIO
+FONDO_GANADOR_MEDIO = "assets/ganador_medio.png"
+FONDO_GANADOR_MEDIO = os.path.join(RUTA_PRINCIPAL, FONDO_GANADOR_MEDIO)
+FONDO_GANADOR_MEDIO = os.path.abspath(FONDO_GANADOR_MEDIO)
+FONDO_GANADOR_MEDIO = pygame.image.load(FONDO_GANADOR_MEDIO)
+
+# FONDO GANADOR DIFICIL
+FONDO_GANADOR_DIFICIL = "assets/ganador_dificil.png"
+FONDO_GANADOR_DIFICIL = os.path.join(RUTA_PRINCIPAL, FONDO_GANADOR_DIFICIL)
+FONDO_GANADOR_DIFICIL = os.path.abspath(FONDO_GANADOR_DIFICIL)
+FONDO_GANADOR_DIFICIL = pygame.image.load(FONDO_GANADOR_DIFICIL)
 
 # MUSIC MENU
 MUSIC_MENU = "sounds/once-in-paris.mp3"
 MUSIC_MENU = os.path.join(RUTA_PRINCIPAL, MUSIC_MENU)
 MUSIC_MENU = os.path.abspath(MUSIC_MENU)
-MUSIC = Music(MUSIC_MENU)
+MUSIC_MENU = Music(MUSIC_MENU)
 
 # PLAY BUTTON
 BUTTON = "assets/button.png"

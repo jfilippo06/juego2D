@@ -3,13 +3,13 @@ import sys
 from clases.button import Button
 from functions.functions import get_font, text
 from pantallas import dificultad
-from rutas import FONDO_MENU, ICO, MUSIC, BUTTON
+from rutas import FONDO_MENU, ICO, MUSIC_MENU, BUTTON
 
 pygame.init()
 
 SCREEN = pygame.display.set_mode((700, 650))
-MUSIC.set_volume(0.5)
-MUSIC.play()
+MUSIC_MENU.set_volume(0.5)
+# MUSIC_MENU.play()
 
 
 PLAY_BUTTON = Button(image=BUTTON, pos=(360, 260),

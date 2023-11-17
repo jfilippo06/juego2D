@@ -3,7 +3,7 @@ import sys
 from clases.button import Button
 from functions.functions import get_font, text
 from pantallas import menu
-from rutas import MUSIC, FONDO_FACIL, FONDO_MEDIO, FONDO_DIFICIL
+from rutas import MUSIC_MENU, FONDO_PERDEDOR_FACIL, FONDO_PERDEDOR_MEDIO, FONDO_PERDEDOR_DIFICIL
 
 pygame.init()
 
@@ -16,7 +16,7 @@ PLAY_BACK = Button(image=None, pos=(370, 330),
 def perdedor_facil():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(FONDO_FACIL, (0, 0))
+        SCREEN.blit(FONDO_PERDEDOR_FACIL, (0, 0))
 
         text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 
@@ -29,8 +29,8 @@ def perdedor_facil():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
-                    MUSIC.play()
-                    MUSIC.set_volume(0.5)
+                    MUSIC_MENU.play()
+                    MUSIC_MENU.set_volume(0.5)
                     menu.main_menu()
 
         pygame.display.update()
@@ -39,7 +39,7 @@ def perdedor_facil():
 def perdedor_medio():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(FONDO_MEDIO, (0, 0))
+        SCREEN.blit(FONDO_PERDEDOR_MEDIO, (0, 0))
 
         text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 
@@ -52,8 +52,8 @@ def perdedor_medio():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
-                    MUSIC.play()
-                    MUSIC.set_volume(0.5)
+                    MUSIC_MENU.set_volume(0.5)
+                    MUSIC_MENU.play()
                     menu.main_menu()
 
         pygame.display.update()
@@ -62,7 +62,7 @@ def perdedor_medio():
 def perdedor_dificil():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(FONDO_DIFICIL, (0, 0))
+        SCREEN.blit(FONDO_PERDEDOR_DIFICIL, (0, 0))
 
         text("HAZ PERDIDO", "white", 40, 370, 230, SCREEN)
 
@@ -75,8 +75,8 @@ def perdedor_dificil():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
-                    MUSIC.play()
-                    MUSIC.set_volume(0.5)
+                    MUSIC_MENU.set_volume(0.5)
+                    MUSIC_MENU.play()
                     menu.main_menu()
 
         pygame.display.update()
